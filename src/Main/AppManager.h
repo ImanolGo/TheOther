@@ -12,9 +12,10 @@
 #include "Manager.h"
 
 
-#include "../Resources/ResourceManager.h"
-#include "../Visuals/ViewManager.h"
-#include "../Visuals/VisualEffectsManager.h"
+#include "ResourceManager.h"
+#include "ViewManager.h"
+#include "VisualEffectsManager.h"
+#include "LayoutManager.h"
 #include "SettingsManager.h"
 
 //========================== class AppManager ==============================
@@ -60,6 +61,8 @@ public:
     //! Returns the visual effects manager
     ofPtr<VisualEffectsManager>   getVisualEffectsManager() { return m_visualEffectsManager; }
 
+    //! Returns the layout manager
+    ofPtr<LayoutManager>   getLayoutManager() { return m_layoutManager; }
 
 private:
 
@@ -93,6 +96,7 @@ private:
     ofPtr<ResourceManager>          m_resourceManager;          ///< Manages resources
     ofPtr<ViewManager>              m_viewManager;              ///< Manages visuals
     ofPtr<VisualEffectsManager>     m_visualEffectsManager;     ///< Manages visual effects
+    ofPtr<LayoutManager>            m_layoutManager;            ///< Manages the layout
 
     bool                            m_logVerbose;
 };

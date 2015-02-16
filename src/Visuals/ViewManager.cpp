@@ -98,7 +98,7 @@ void ViewManager::addOverlay(ofPtr<BasicVisual> visual,int zOrder)
     if(isOverlayAlreadyAdded(visual)){
         return;
     }
-
+    
 	m_overlays.push_back(Overlay(zOrder,visual));
 	m_overlays.sort();
 }

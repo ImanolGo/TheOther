@@ -9,6 +9,8 @@
   
   <textures>
   
+  	<texture name="Background" path="images/general/background.jpg"/>
+
 	<texture name="WaterColorTexture1" path="images/watercolors/water_color_textures_01.png"/>
 	<texture name="WaterColorTexture2" path="images/watercolors/water_color_textures_02.png"/>
 	<texture name="WaterColorTexture3" path="images/watercolors/water_color_textures_03.png"/>

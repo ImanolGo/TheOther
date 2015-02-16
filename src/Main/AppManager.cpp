@@ -39,6 +39,7 @@ void AppManager::createManagers()
 	m_resourceManager = ofPtr<ResourceManager>(new ResourceManager());
 	m_visualEffectsManager = ofPtr<VisualEffectsManager>(new VisualEffectsManager());
 	m_viewManager = ofPtr<ViewManager>(new ViewManager());
+    m_layoutManager = ofPtr<LayoutManager>(new LayoutManager());
 }
 
 void AppManager::setup()
@@ -71,6 +72,7 @@ void AppManager::setupManagers()
     m_viewManager->setup();
     m_resourceManager->setup();
     m_visualEffectsManager->setup();
+    m_layoutManager->setup();
 }
 
 void AppManager::update()

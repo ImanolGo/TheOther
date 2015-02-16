@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+
+  <of_settings>
+	<window title="pARTicles: The Others" x="0" y="0" width="1024" height="648" fullscreen="0"/>
+	<debug showCursor="1" setVerbose="0"/>
+	<network udpPort="3333" />
+  </of_settings>
+  
+  <textures>
+  
+	<texture name="WaterColorTexture1" path="images/watercolors/water_color_textures_01.png"/>
+	<texture name="WaterColorTexture2" path="images/watercolors/water_color_textures_02.png"/>
+	<texture name="WaterColorTexture3" path="images/watercolors/water_color_textures_03.png"/>
+	<texture name="WaterColorTexture4" path="images/watercolors/water_color_textures_04.png"/>
+	<texture name="WaterColorTexture5" path="images/watercolors/water_color_textures_05.png"/>
+	<texture name="WaterColorTexture6" path="images/watercolors/water_color_textures_06.png"/>
+	<texture name="WaterColorTexture7" path="images/watercolors/water_color_textures_07.png"/>
+	<texture name="WaterColorTexture8" path="images/watercolors/water_color_textures_08.png"/>
+	<texture name="WaterColorTexture9" path="images/watercolors/water_color_textures_09.png"/>
+	<texture name="WaterColorTexture10" path="images/watercolors/water_color_textures_10.png"/>
+	<texture name="WaterColorTexture11" path="images/watercolors/water_color_textures_11.png"/>
+	<texture name="WaterColorTexture12" path="images/watercolors/water_color_textures_12.png"/>
+	<texture name="WaterColorTexture13" path="images/watercolors/water_color_textures_13.png"/>
+	<texture name="WaterColorTexture14" path="images/watercolors/water_color_textures_14.png"/>
+	<texture name="WaterColorTexture15" path="images/watercolors/water_color_textures_15.png"/>
+	<texture name="WaterColorTexture16" path="images/watercolors/water_color_textures_16.png"/>
+	<texture name="WaterColorTexture17" path="images/watercolors/water_color_textures_17.png"/>
+	<texture name="WaterColorTexture18" path="images/watercolors/water_color_textures_18.png"/>
+	<texture name="WaterColorTexture19" path="images/watercolors/water_color_textures_19.png"/>
+	<texture name="WaterColorTexture20" path="images/watercolors/water_color_textures_20.png"/>
+	<texture name="WaterColorTexture21" path="images/watercolors/water_color_textures_21.png"/>
+	<texture name="WaterColorTexture22" path="images/watercolors/water_color_textures_22.png"/>
+	<texture name="WaterColorTexture23" path="images/watercolors/water_color_textures_23.png"/>
+	<texture name="WaterColorTexture24" path="images/watercolors/water_color_textures_24.png"/>
+	<texture name="WaterColorTexture25" path="images/watercolors/water_color_textures_25.png"/>
+	
+  </textures>
+
+  
+</settings>

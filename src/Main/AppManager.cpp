@@ -40,6 +40,8 @@ void AppManager::createManagers()
 	m_visualEffectsManager = ofPtr<VisualEffectsManager>(new VisualEffectsManager());
 	m_viewManager = ofPtr<ViewManager>(new ViewManager());
     m_layoutManager = ofPtr<LayoutManager>(new LayoutManager());
+    m_voronoiManager = ofPtr<VoronoiManager>(new VoronoiManager());
+
 }
 
 void AppManager::setup()
@@ -73,6 +75,7 @@ void AppManager::setupManagers()
     m_resourceManager->setup();
     m_visualEffectsManager->setup();
     m_layoutManager->setup();
+    m_voronoiManager->setup();
 }
 
 void AppManager::update()

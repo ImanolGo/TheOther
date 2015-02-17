@@ -45,6 +45,7 @@ void SettingsManager::loadAllSettings()
     this->setNetworkProperties();
     this->loadTextureSettings();
     this->loadSvgSettings();
+    this->loadColors();
 }
 
 bool SettingsManager::loadSettingsFile()
@@ -145,6 +146,42 @@ void SettingsManager::setNetworkProperties()
     ofLogNotice() <<"SettingsManager::setNetworkProperties->  path not found: " << networkPath ;
 }
 
+void SettingsManager::loadColors()
+{
+    m_xmlSettings.setTo("//");
+    
+    string colorsSettingsPath = "//colors";
+    if(m_xmlSettings.exists(colorsSettingsPath)) {
+        
+        typedef   std::map<string, string>   AttributesMap;
+        AttributesMap attributes;
+        
+        colorsSettingsPath = "//colors/color[0]";
+        m_xmlSettings.setTo(colorsSettingsPath);
+        do {
+            
+            attributes = m_xmlSettings.getAttributes();
+            
+            int r = ofToInt(attributes["r"]);
+            int g = ofToInt(attributes["g"]);
+            int b = ofToInt(attributes["b"]);
+            
+            ofPtr<ofColor> color = ofPtr<ofColor> (new ofColor(r,g,b));
+            m_colors[attributes["name"]] = color;
+            
+            
+            ofLogNotice() <<"SettingsManager::loadColors->  color = " << attributes["name"] <<", r = " << r
+            <<", g = "<< g << ", b = " << b ;
+        }
+        while(m_xmlSettings.setToSibling()); // go to the next node
+        
+        
+        ofLogNotice() <<"SettingsManager::loadColors->  successfully loaded the applications colors" ;
+        return;
+    }
+    
+    ofLogNotice() <<"SettingsManager::loadColors->  path not found: " << colorsSettingsPath ;
+}
 
 void SettingsManager::loadTextureSettings()
 {
@@ -174,6 +211,16 @@ void SettingsManager::loadTextureSettings()
     }
 
     ofLogNotice() <<"SettingsManager::loadTextureSettings->  path not found: " << resourcesPath ;
+}
+
+ofColor SettingsManager::getColor(const string& colorName)
+{
+    ofColor color;
+    if(m_colors.find(colorName)!= m_colors.end()){
+        color.setHex(m_colors[colorName]->getHex());
+    }
+    
+    return color;
 }
 
 

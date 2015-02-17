@@ -12,7 +12,8 @@
 #include "VisualEffects.h"
 #include "ViewManager.h"
 
-#include "../Main/AppManager.h"
+#include "AppManager.h"
+#include "VoronoiManager.h"
 
 #include "ofMain.h"
 
@@ -35,10 +36,37 @@ void ViewManager::setup()
 
     Manager::setup();
 
+    this->setupGL();
+    this->setup3D();
     this->setupTextVisuals();
     this->addListeners();
 
     ofLogNotice() << "ViewManager::initialized ";
+}
+
+void ViewManager::setupGL()
+{
+    
+    ofEnableLighting();
+    ofEnableAlphaBlending();
+    ofEnableSmoothing();
+    
+    // this uses depth information for occlusion
+    // rather than always drawing things on top of each other
+    ofEnableDepthTest();
+    
+    // ofPlane uses texture coordinates from 0-1, so you can load whatever
+    // sized images you want and still use them to texture your box
+    // but we have to explicitly normalize our tex coords here
+    ofEnableNormalizedTexCoords();
+    
+    
+}
+
+void ViewManager::setup3D()
+{
+    m_light.setPosition(100,500, 100);
+    m_cam.setAutoDistance(true);
 }
 
 void ViewManager::setupTextVisuals()
@@ -48,7 +76,7 @@ void ViewManager::setupTextVisuals()
     float width = 256;
     float height = fontSize;
     string text = "";
-    string fontName ="fonts/trade/TradeGothicLTStd.ttf";
+    string fontName ="fonts/helvetica-neue-medium.ttf";
     ofColor textColor = ofColor::black;
 
     m_frameRateText = ofPtr<TextVisual> (new TextVisual(position,width,height));
@@ -69,13 +97,38 @@ void ViewManager::update()
 	}
 }
 
+
+
 void ViewManager::draw()
 {
-	this->drawOverlays();
+    this->drawOverlays();
+    this->drawVisuals();
+	
 
 	if(m_showDebugInfo){
         m_frameRateText->draw();
 	}
+}
+
+void ViewManager::drawVisuals()
+{
+    m_cam.begin();
+    m_light.enable();
+    ofEnableLighting();
+    glEnable(GL_DEPTH_TEST);
+    
+    AppManager::getInstance().getVoronoiManager()->draw();
+    
+    for(VisualList::iterator it = m_visuals.begin(); it != m_visuals.end(); it++) {
+        ofPushMatrix();
+        (*it)->draw();
+        ofPopMatrix();
+    }
+    
+    glDisable(GL_DEPTH_TEST);
+    ofDisableLighting();
+    m_light.disable();
+    m_cam.end();
 }
 
 void ViewManager::drawOverlays()
@@ -121,6 +174,33 @@ void ViewManager::removeOverlay(ofPtr<BasicVisual> visual)
 	}
 }
 
+void ViewManager::addVisual(ofPtr<BasicVisual> visual)
+{
+    if(!visual){
+        return;
+    }
+    
+    if(isVisualAlreadyAdded(visual)){
+        return;
+    }
+
+    
+    m_visuals.push_back(visual);
+}
+
+void ViewManager::removeVisual(ofPtr<BasicVisual> visual)
+{
+    for(VisualList::iterator it = m_visuals.begin(); it != m_visuals.end();) {
+        if(*it== visual) {
+            AppManager::getInstance().getVisualEffectsManager()->removeAllVisualEffects(*it);
+            it = m_visuals.erase(it);
+        }
+        else {
+            ++it;
+        }
+    }
+}
+
 bool ViewManager::isOverlayAlreadyAdded(ofPtr<BasicVisual> visual)
 {
     if(!visual)
@@ -135,6 +215,20 @@ bool ViewManager::isOverlayAlreadyAdded(ofPtr<BasicVisual> visual)
 	return false;
 }
 
+bool ViewManager::isVisualAlreadyAdded(ofPtr<BasicVisual> visual)
+{
+    if(!visual)
+        return true;
+    
+    for(VisualList::iterator it = m_visuals.begin(); it != m_visuals.end(); ++it) {
+        if(*it == visual) {
+            return true;
+        }
+    }
+    
+    return false;
+}
+
 void ViewManager::keyPressed(ofKeyEventArgs &e)
 {
     int key = e.key;
@@ -142,6 +236,8 @@ void ViewManager::keyPressed(ofKeyEventArgs &e)
         m_showDebugInfo = !m_showDebugInfo;
     }
 }
+
+
 
 
 

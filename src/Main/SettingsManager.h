@@ -37,7 +37,8 @@ class SettingsManager: public Manager
 
         const ResourcesPathMap& getSvgResourcesPath() const {return m_svgResourcesPath;}
 
-
+        ofColor getColor(const string& colorName);
+    
         float getAppWidth() const {return m_appWidth;}
 
         float getAppHeight() const {return m_appHeight;}
@@ -61,7 +62,9 @@ class SettingsManager: public Manager
 
         //! Sets all the window properties
         void setWindowProperties();
-
+    
+        //! Loads all the app colors
+        void loadColors();
 
         //! Loads all the textures settings
         void loadTextureSettings();
@@ -71,10 +74,15 @@ class SettingsManager: public Manager
 
 
     private:
+    
+        typedef             map<string,string>               ResourcesPathMap;       ///< defines a map of path attached to the resources name
+        typedef             map< string, ofPtr<ofColor> >    ColorMap;               ///< Defines a map of colors attached to a name
+
 
         ofXml		            m_xmlSettings;          ///< instance of the xml parser
         ResourcesPathMap        m_texturesPath;         ///< stores the texture paths
         ResourcesPathMap        m_svgResourcesPath;     ///< stores the resources paths
+        ColorMap                m_colors;               ///< stores all the application's colors
         float                   m_appWidth;             ///< stores the applications width
         float                   m_appHeight;            ///< stores the applications height
         int                     m_udpPort;              ///< stores the UDP port used for the TUIO communications

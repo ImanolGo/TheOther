@@ -32,14 +32,20 @@ public:
     //! Destructor
     ~ViewManager();
 
-    //! Setups the logic
+    //! Setups the dview manager
     void setup();
-
+    
     //! renders all the graphics
     void draw();
 
     //! updates the date manager
     void update();
+    
+    //! Adds a visual to the 3D environment
+    void addVisual(ofPtr<BasicVisual> visual);
+    
+    //! Removes a visual to the list of elements that are rendered
+    void removeVisual(ofPtr<BasicVisual>visual);
 
     //! Adds a visual as an overlay with the specified z-ordering.
     void addOverlay(ofPtr<BasicVisual> visual,  int zOrder = 0);
@@ -51,12 +57,21 @@ public:
 
 private:
 
+    //! Setups the logic
+    void setup3D();
+    
+    //! Setups the OpenGL parameters
+    void setupGL();
+    
     //! Adds the events to be listen to
     void addListeners();
 
     //! Function called when a key is pressed
     void keyPressed(ofKeyEventArgs &e);
-
+    
+    //! Draws all the visuals from the 3D world
+    void drawVisuals();
+    
     //! Draws all the visual overlays
     void drawOverlays();
 
@@ -65,16 +80,26 @@ private:
 
     //! Returns if the overlay has already been added
     bool isOverlayAlreadyAdded(ofPtr<BasicVisual> visual);
+    
+    //! Returns if the visual has already been added
+    bool isVisualAlreadyAdded(ofPtr<BasicVisual> visual);
+    
+    
 
 private:
 
-    typedef std::pair<int, ofPtr<BasicVisual> > Overlay;        ///< pair<zOrder,ofPtr<BasicVisual>> defines an overlay elemet
-    typedef std::list<Overlay>      OverlayList;    ///< list of overlay elements
+    typedef std::pair<int, ofPtr<BasicVisual> >   Overlay;        ///< pair<zOrder,ofPtr<BasicVisual>> defines an overlay elemet
+    typedef std::list<Overlay>                    OverlayList;    ///< list of overlay elements
+    typedef std::vector<ofPtr<BasicVisual> >      VisualList;    ///< list of visual elements
 
     OverlayList             m_overlays;         ///< list of all overlays that are rendered each frame
+    VisualList              m_visuals;            ///< list of all overlays that are rendered each frame
     ofPtr<TextVisual>       m_frameRateText;    ///< font displaying the frame rate
 
     bool                    m_showDebugInfo;    ///< it tells if you should or should not show debug information
+    
+    ofEasyCam               m_cam;
+    ofLight                 m_light;
 
 };
 

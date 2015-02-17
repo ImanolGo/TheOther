@@ -29,7 +29,7 @@ public:
     //! Destructor
     virtual ~ImageVisual();
 
-	//! Draws the text visual
+	//! Draws the image visual
 	virtual void draw();
 
     //! Sets the texture to be binded to the quad

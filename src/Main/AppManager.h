@@ -17,6 +17,7 @@
 #include "VisualEffectsManager.h"
 #include "LayoutManager.h"
 #include "SettingsManager.h"
+#include "VoronoiManager.h"
 
 //========================== class AppManager ==============================
 //============================================================================
@@ -63,6 +64,9 @@ public:
 
     //! Returns the layout manager
     ofPtr<LayoutManager>   getLayoutManager() { return m_layoutManager; }
+    
+    //! Returns the voronoi manager
+    ofPtr<VoronoiManager>   getVoronoiManager() { return m_voronoiManager; }
 
 private:
 
@@ -97,6 +101,7 @@ private:
     ofPtr<ViewManager>              m_viewManager;              ///< Manages visuals
     ofPtr<VisualEffectsManager>     m_visualEffectsManager;     ///< Manages visual effects
     ofPtr<LayoutManager>            m_layoutManager;            ///< Manages the layout
+    ofPtr<VoronoiManager>           m_voronoiManager;           ///< Manages the voronoi diagram
 
     bool                            m_logVerbose;
 };

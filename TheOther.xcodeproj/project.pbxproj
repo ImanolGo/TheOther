@@ -9,31 +9,53 @@
 /* Begin PBXBuildFile section */
 		0466B9E6A55078A9F39B1B4B /* svgtiny_gradient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD4F639B12AA5C1013177E49 /* svgtiny_gradient.cpp */; };
 		07A19256EFA37BCECC2FFFD8 /* VisualEffectsManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0005E54BF7A3BB8C207548 /* VisualEffectsManager.cpp */; };
-		082E853F1A924AF300C321F0 /* LayoutManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 082E853D1A924AF300C321F0 /* LayoutManager.cpp */; };
 		09D74799769FA5D9202D58E6 /* fontstash.c in Sources */ = {isa = PBXBuildFile; fileRef = B5C0F72C060657B91E05ABEC /* fontstash.c */; };
-		10B5F7F59A7BC5E9D88D0B88 /* ofxaddons_thumbnail.png in Sources */ = {isa = PBXBuildFile; fileRef = E66EB415F2982872E2E5D92F /* ofxaddons_thumbnail.png */; };
+		0AD4B733F51922474594EAF0 /* container_prd.hh in Sources */ = {isa = PBXBuildFile; fileRef = 916F8D0D996C60C34BF7FA76 /* container_prd.hh */; };
 		1AF15FCF93D2DDD6D4285C8E /* AppManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5056FC61E30B9810903B814D /* AppManager.cpp */; };
+		1C4129FD210B8CC821C4A6CC /* VoronoiManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 099CE298999A45EE44FBF2DF /* VoronoiManager.cpp */; };
+		1CDE687E4638B0D00FF32A31 /* container_prd.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA02019FB3D562D7C48A07 /* container_prd.cc */; };
 		20DD9BBB631FBC0CDCCFA6B6 /* ofTextConverter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E13F8EA447BEE4F113C15AB /* ofTextConverter.cpp */; };
-		2C307F601F9D172DED5DD745 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 62A97F720DDA0F14E62A65AE /* README.md */; };
+		2170AD05A3CB6E0A758910B3 /* container.cc in Sources */ = {isa = PBXBuildFile; fileRef = 08A8D2F77DDA12DD7F6C7EC6 /* container.cc */; };
+		21AF2280B55C1AF91D7D5DA8 /* voro++.hh in Sources */ = {isa = PBXBuildFile; fileRef = 298DD62CF32E098A08740F18 /* voro++.hh */; };
+		2CA5D279B384DAB545A36AC8 /* unitcell.hh in Sources */ = {isa = PBXBuildFile; fileRef = 22B200BC27DBC152B3DA229F /* unitcell.hh */; };
+		32303B580BEF0101A77D553F /* v_base.cc in Sources */ = {isa = PBXBuildFile; fileRef = A1947D4BB4AAA7F8148B5F03 /* v_base.cc */; };
+		426CCD9DAA55426821D9BD12 /* pre_container.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7CFECA4C864319E1EF0AB46A /* pre_container.cc */; };
+		5119C09895937E42000F9868 /* ofxaddons_thumbnail.png in Sources */ = {isa = PBXBuildFile; fileRef = 0D5E8D81C507117CF9C76CFD /* ofxaddons_thumbnail.png */; };
+		5883BCBF7628D69511A3DA20 /* ofxVoro.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86052A643A89DF7744490162 /* ofxVoro.cpp */; };
 		58BCEB4034B30CB4A3456FC7 /* SettingsManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73D7AA4CF4895FC3DEEC2978 /* SettingsManager.cpp */; };
+		61827184D71642D9EDE0D61D /* unitcell.cc in Sources */ = {isa = PBXBuildFile; fileRef = 6768F3AD3A9DB802FC5EDB5E /* unitcell.cc */; };
+		641BA1DBF8F52AFBB63ADAAD /* SeedVisual.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A53719DE810BC7FFE21D87A /* SeedVisual.cpp */; };
 		6B7E4C784AE8640C1E479F5C /* TextVisual.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2E56F01EF0A1F4471EECBA5 /* TextVisual.cpp */; };
 		6BCAA20BD0611A7757ACE36A /* ViewManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C143F226588E1684FE7027A /* ViewManager.cpp */; };
 		6C354394749C51F9F0D0275E /* ofxFontStash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A874153506A6F910899B3206 /* ofxFontStash.cpp */; };
+		6D37A0022404B769CB8DF8BD /* common.cc in Sources */ = {isa = PBXBuildFile; fileRef = D0840413744045BFE0A9C17E /* common.cc */; };
+		6D78EDBC44255F05C7C14C2A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = F175BFDC71F9ACB7BC3946A7 /* README.md */; };
+		7CB7E48D81EF30030C363079 /* wall.hh in Sources */ = {isa = PBXBuildFile; fileRef = E09C370728108AC653131E24 /* wall.hh */; };
 		7E78555D595408C86F902937 /* ofUnicode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D5D010021EF505D97954BAD /* ofUnicode.cpp */; };
 		82706DC5B76466CE22512BFE /* stb_truetype.c in Sources */ = {isa = PBXBuildFile; fileRef = 0C317093252CD0209C4CFFD7 /* stb_truetype.c */; };
 		82C668F7D0DF704AD7D1BB1C /* utf8cpp.html in Sources */ = {isa = PBXBuildFile; fileRef = 177B2CF2F12B417629282688 /* utf8cpp.html */; };
-		8A66B80A725BF90636D1F48F /* VoronoiDiagramGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E38F2139A3265534A8C7C65D /* VoronoiDiagramGenerator.cpp */; };
+		92B57D1B0CD48CC7AEA413C9 /* container.hh in Sources */ = {isa = PBXBuildFile; fileRef = 25AC067683FAB463643EE5FE /* container.hh */; };
+		93510377552D47B6620A7586 /* LayoutManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4229475864D5EBC7913C8351 /* LayoutManager.cpp */; };
+		977F942B13C9A4524C76524C /* v_base.hh in Sources */ = {isa = PBXBuildFile; fileRef = 0C4C7CE9E09CC6494B468911 /* v_base.hh */; };
 		9AA9E6A5FDCE179304EA45C7 /* ofxaddons_thumbnail.png in Sources */ = {isa = PBXBuildFile; fileRef = A78E568E1B343F28663BF7AE /* ofxaddons_thumbnail.png */; };
 		9D3E5A7C189607A50D28E499 /* src_colors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 56E991FC0AE7E20FD398127D /* src_colors.cpp */; };
 		A417B50DA594FBD304CFF2CA /* svgtiny.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9ED2D89B10F4457477670D32 /* svgtiny.cpp */; };
 		A4BD3FA882A9E74A09F3601E /* ReadMe.md in Sources */ = {isa = PBXBuildFile; fileRef = C67FFE067AA927EC3CB8A812 /* ReadMe.md */; };
+		A8504AB11437E681524D5CA8 /* cell.hh in Sources */ = {isa = PBXBuildFile; fileRef = 0C757F82453518EA35C4AECA /* cell.hh */; };
 		ABE6DC135E0BB54DBD5E3CF7 /* Font.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3F5920A55F768ADF04E2ACD /* Font.cpp */; };
+		B0FA48FD636D984CF14697ED /* worklist.hh in Sources */ = {isa = PBXBuildFile; fileRef = 46D73E9D472D7018A0A593FE /* worklist.hh */; };
 		B371FB10027392228325A71C /* VisualEffects.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69C5D7885EAD0E2B497D6D21 /* VisualEffects.cpp */; };
 		B7993B374B98F50CBD9EC220 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 074978820820325AB8737225 /* README.md */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		C95EBA7604104A8AA4808823 /* SvgVisual.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8FCCFBFB6894301784A7CBA /* SvgVisual.cpp */; };
+		CA504DD0663538C62EB142A0 /* c_loops.cc in Sources */ = {isa = PBXBuildFile; fileRef = F0876FBE59D7F32AABA2E791 /* c_loops.cc */; };
+		CC2C76300FC099C449D9B702 /* config.hh in Sources */ = {isa = PBXBuildFile; fileRef = A29D1720797EDE49569165EF /* config.hh */; };
+		D380740EE3A5ED9D343B4E69 /* v_compute.hh in Sources */ = {isa = PBXBuildFile; fileRef = 226082F85B27370F1946A916 /* v_compute.hh */; };
 		D75E4524BBB94FF34BF7DD48 /* ReleaseNotes in Sources */ = {isa = PBXBuildFile; fileRef = A7F27238F9FD8030ED3D1676 /* ReleaseNotes */; };
 		DA22DA3A4F2E611DF50078F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F47F486843AA062205007 /* main.cpp */; };
+		DABCF5445EC1BD12FEAEE7AA /* c_loops.hh in Sources */ = {isa = PBXBuildFile; fileRef = CFE81BEBC76B8FB296122D73 /* c_loops.hh */; };
+		DF12413F6E2CA8692C0CBC29 /* v_compute.cc in Sources */ = {isa = PBXBuildFile; fileRef = C909F0FC37F07C58B334CD56 /* v_compute.cc */; };
+		E22D533D13492B8CE4F2DD4D /* cell.cc in Sources */ = {isa = PBXBuildFile; fileRef = CE083735531A8231331EDBDD /* cell.cc */; };
 		E3FFAC7B60D2FCB392DE0EA2 /* ImageVisual.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC6582E355CB0B6EF83C47F3 /* ImageVisual.cpp */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
@@ -48,13 +70,16 @@
 		E4C2424810CC5A17004149E2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424510CC5A17004149E2 /* Cocoa.framework */; };
 		E4C2424910CC5A17004149E2 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424610CC5A17004149E2 /* IOKit.framework */; };
 		E4EB6799138ADC1D00A09F29 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
+		E53850B783F2A07D78176896 /* common.hh in Sources */ = {isa = PBXBuildFile; fileRef = BCAAB41E6AFCED5BF0E93979 /* common.hh */; };
 		E76816EF014518B0B3E83C39 /* ofxSvg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73DCC3AF2CF91782437F76A9 /* ofxSvg.cpp */; };
 		E7AE069F42FEA729F126F3E4 /* TheOtherApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 710357F0B933ECC723AB19BA /* TheOtherApp.cpp */; };
 		E7E077E515D3B63C0020DFD4 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */; };
 		E7E077E815D3B6510020DFD4 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E077E715D3B6510020DFD4 /* QTKit.framework */; };
 		E7F985F815E0DEA3003869B5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F985F515E0DE99003869B5 /* Accelerate.framework */; };
+		EB22CF296819336E6E858CA9 /* wall.cc in Sources */ = {isa = PBXBuildFile; fileRef = 4AFE9ABB7371DF487EFD2054 /* wall.cc */; };
+		EB99DB18CB2BF689751C83E4 /* pre_container.hh in Sources */ = {isa = PBXBuildFile; fileRef = C8A683C233C8C9F1E8768A0B /* pre_container.hh */; };
 		EC108074DB75C3CD93A7DADF /* ofUTF8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4DEA9B316209449F17ED538 /* ofUTF8.cpp */; };
-		FC1AFEA0D235EC15EB52DA18 /* LICENSE in Sources */ = {isa = PBXBuildFile; fileRef = A896394D128D30AFB3318A1A /* LICENSE */; };
+		F96491D70761ED52CB441E4E /* rad_option.hh in Sources */ = {isa = PBXBuildFile; fileRef = 916C96E4E8E0604C642682EF /* rad_option.hh */; };
 		FC6E3B1CE5C09A5985961C33 /* ResourceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 718E1DCD2B98ABA342C2447C /* ResourceManager.cpp */; };
 		FCA1CD00EA2BBEEEBA5C4AC9 /* svgtiny_list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64A49DF5E7D940CE6A916D29 /* svgtiny_list.cpp */; };
 /* End PBXBuildFile section */
@@ -90,34 +115,48 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		03DB42A0115ED67D412CDA48 /* SeedVisual.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SeedVisual.h; path = src/Layout/SeedVisual.h; sourceTree = SOURCE_ROOT; };
 		074978820820325AB8737225 /* README.md */ = {isa = PBXFileReference; explicitFileType = file; fileEncoding = 30; name = README.md; path = src/Addons/ofxUnicode/README.md; sourceTree = SOURCE_ROOT; };
-		082E853D1A924AF300C321F0 /* LayoutManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LayoutManager.cpp; sourceTree = "<group>"; };
-		082E853E1A924AF300C321F0 /* LayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutManager.h; sourceTree = "<group>"; };
+		08A8D2F77DDA12DD7F6C7EC6 /* container.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = container.cc; path = "src/Addons/ofxVoro/libs/voro++/container.cc"; sourceTree = SOURCE_ROOT; };
 		08C5194B0C92DDA2A7539395 /* core.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = core.h; path = src/Addons/ofxUnicode/libs/utf8cpp/src/utf8_v2_3_1/source/utf8/core.h; sourceTree = SOURCE_ROOT; };
+		099CE298999A45EE44FBF2DF /* VoronoiManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = VoronoiManager.cpp; path = src/Layout/VoronoiManager.cpp; sourceTree = SOURCE_ROOT; };
+		0A53719DE810BC7FFE21D87A /* SeedVisual.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = SeedVisual.cpp; path = src/Layout/SeedVisual.cpp; sourceTree = SOURCE_ROOT; };
 		0ACA94EAF2C7DCA9EE906D69 /* svgtiny_internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = svgtiny_internal.h; path = src/Addons/ofxSvg/libs/svgTiny/src/svgtiny_internal.h; sourceTree = SOURCE_ROOT; };
 		0C1C0F60B9ED693828ED32A8 /* ofUnicode.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofUnicode.h; path = src/Addons/ofxUnicode/src/ofUnicode.h; sourceTree = SOURCE_ROOT; };
 		0C317093252CD0209C4CFFD7 /* stb_truetype.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 30; name = stb_truetype.c; path = src/Addons/ofxFontStash/libs/fontstash/src/stb_truetype.c; sourceTree = SOURCE_ROOT; };
+		0C4C7CE9E09CC6494B468911 /* v_base.hh */ = {isa = PBXFileReference; explicitFileType = file; fileEncoding = 30; name = v_base.hh; path = "src/Addons/ofxVoro/libs/voro++/v_base.hh"; sourceTree = SOURCE_ROOT; };
+		0C757F82453518EA35C4AECA /* cell.hh */ = {isa = PBXFileReference; explicitFileType = file; fileEncoding = 30; name = cell.hh; path = "src/Addons/ofxVoro/libs/voro++/cell.hh"; sourceTree = SOURCE_ROOT; };
+		0D5E8D81C507117CF9C76CFD /* ofxaddons_thumbnail.png */ = {isa = PBXFileReference; explicitFileType = file; fileEncoding = 30; name = ofxaddons_thumbnail.png; path = src/Addons/ofxVoro/ofxaddons_thumbnail.png; sourceTree = SOURCE_ROOT; };
 		0E13F8EA447BEE4F113C15AB /* ofTextConverter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofTextConverter.cpp; path = src/Addons/ofxUnicode/src/ofTextConverter.cpp; sourceTree = SOURCE_ROOT; };
 		0E2F448EF4CBF5D95E755AEC /* utf8.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = utf8.h; path = src/Addons/ofxUnicode/libs/utf8cpp/src/utf8_v2_3_1/source/utf8.h; sourceTree = SOURCE_ROOT; };
 		133CC8D4DA0959EDC1317FA4 /* fontstash.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = fontstash.h; path = src/Addons/ofxFontStash/libs/fontstash/src/fontstash.h; sourceTree = SOURCE_ROOT; };
 		177B2CF2F12B417629282688 /* utf8cpp.html */ = {isa = PBXFileReference; explicitFileType = file; fileEncoding = 30; name = utf8cpp.html; path = src/Addons/ofxUnicode/libs/utf8cpp/src/utf8_v2_3_1/doc/utf8cpp.html; sourceTree = SOURCE_ROOT; };
 		1E0FC185DC65CED9B6295DDD /* checked.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = checked.h; path = src/Addons/ofxUnicode/libs/utf8cpp/src/utf8_v2_3_1/source/utf8/checked.h; sourceTree = SOURCE_ROOT; };
 		1F6584F96693D0D8399C3C75 /* ofUTF8.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofUTF8.h; path = src/Addons/ofxUnicode/src/ofUTF8.h; sourceTree = SOURCE_ROOT; };
+		226082F85B27370F1946A916 /* v_compute.hh */ = {isa = PBXFileReference; explicitFileType = file; fileEncoding = 30; name = v_compute.hh; path = "src/Addons/ofxVoro/libs/voro++/v_compute.hh"; sourceTree = SOURCE_ROOT; };
+		22B200BC27DBC152B3DA229F /* unitcell.hh */ = {isa = PBXFileReference; explicitFileType = file; fileEncoding = 30; name = unitcell.hh; path = "src/Addons/ofxVoro/libs/voro++/unitcell.hh"; sourceTree = SOURCE_ROOT; };
 		24C1CE9B86D106C5847E4043 /* TheOtherApp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = TheOtherApp.h; path = src/Main/TheOtherApp.h; sourceTree = SOURCE_ROOT; };
+		25AC067683FAB463643EE5FE /* container.hh */ = {isa = PBXFileReference; explicitFileType = file; fileEncoding = 30; name = container.hh; path = "src/Addons/ofxVoro/libs/voro++/container.hh"; sourceTree = SOURCE_ROOT; };
+		298DD62CF32E098A08740F18 /* voro++.hh */ = {isa = PBXFileReference; explicitFileType = file; fileEncoding = 30; name = "voro++.hh"; path = "src/Addons/ofxVoro/libs/voro++/voro++.hh"; sourceTree = SOURCE_ROOT; };
 		2EB7FBE213BEB86509869B2C /* ImageVisual.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ImageVisual.h; path = src/Visuals/ImageVisual.h; sourceTree = SOURCE_ROOT; };
 		3DF82BB797E7115FA753D649 /* VisualEffectsManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = VisualEffectsManager.h; path = src/Visuals/VisualEffectsManager.h; sourceTree = SOURCE_ROOT; };
+		4229475864D5EBC7913C8351 /* LayoutManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = LayoutManager.cpp; path = src/Layout/LayoutManager.cpp; sourceTree = SOURCE_ROOT; };
+		46D73E9D472D7018A0A593FE /* worklist.hh */ = {isa = PBXFileReference; explicitFileType = file; fileEncoding = 30; name = worklist.hh; path = "src/Addons/ofxVoro/libs/voro++/worklist.hh"; sourceTree = SOURCE_ROOT; };
 		496FB8BB67BF37BF8B96AD33 /* SettingsManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SettingsManager.h; path = src/Main/SettingsManager.h; sourceTree = SOURCE_ROOT; };
+		4AFE9ABB7371DF487EFD2054 /* wall.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = wall.cc; path = "src/Addons/ofxVoro/libs/voro++/wall.cc"; sourceTree = SOURCE_ROOT; };
 		5056FC61E30B9810903B814D /* AppManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = AppManager.cpp; path = src/Main/AppManager.cpp; sourceTree = SOURCE_ROOT; };
 		56E991FC0AE7E20FD398127D /* src_colors.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = src_colors.cpp; path = src/Addons/ofxSvg/libs/svgTiny/src/src_colors.cpp; sourceTree = SOURCE_ROOT; };
 		589087FD6A45E7AD2FF3CD32 /* ofxSvg.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxSvg.h; path = src/Addons/ofxSvg/src/ofxSvg.h; sourceTree = SOURCE_ROOT; };
 		589D5A41B8E9E3B5FC11BCDB /* core.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = core.h; path = src/Addons/ofxUnicode/libs/utf8cpp/include/utf8/core.h; sourceTree = SOURCE_ROOT; };
 		58E065620B83E3DBCAAB9843 /* stb_truetype.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = stb_truetype.h; path = src/Addons/ofxFontStash/libs/fontstash/src/stb_truetype.h; sourceTree = SOURCE_ROOT; };
+		5ADA02019FB3D562D7C48A07 /* container_prd.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = container_prd.cc; path = "src/Addons/ofxVoro/libs/voro++/container_prd.cc"; sourceTree = SOURCE_ROOT; };
 		5B9CF9B2B47C1875E34834E9 /* unchecked.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = unchecked.h; path = src/Addons/ofxUnicode/libs/utf8cpp/src/utf8_v2_3_1/source/utf8/unchecked.h; sourceTree = SOURCE_ROOT; };
 		6118811E18CD507D09EC8180 /* TextVisual.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = TextVisual.h; path = src/Visuals/TextVisual.h; sourceTree = SOURCE_ROOT; };
-		62A97F720DDA0F14E62A65AE /* README.md */ = {isa = PBXFileReference; explicitFileType = file; fileEncoding = 30; name = README.md; path = src/Addons/ofxVoronoi2D/README.md; sourceTree = SOURCE_ROOT; };
 		637C043FA664B485A0BA2DC2 /* ResourceManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ResourceManager.h; path = src/Resources/ResourceManager.h; sourceTree = SOURCE_ROOT; };
 		64A49DF5E7D940CE6A916D29 /* svgtiny_list.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = svgtiny_list.cpp; path = src/Addons/ofxSvg/libs/svgTiny/src/svgtiny_list.cpp; sourceTree = SOURCE_ROOT; };
+		6768F3AD3A9DB802FC5EDB5E /* unitcell.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = unitcell.cc; path = "src/Addons/ofxVoro/libs/voro++/unitcell.cc"; sourceTree = SOURCE_ROOT; };
 		69C5D7885EAD0E2B497D6D21 /* VisualEffects.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = VisualEffects.cpp; path = src/Visuals/VisualEffects.cpp; sourceTree = SOURCE_ROOT; };
+		6B76699C9C7FF573026BF2AA /* VoronoiManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = VoronoiManager.h; path = src/Layout/VoronoiManager.h; sourceTree = SOURCE_ROOT; };
 		6D5D010021EF505D97954BAD /* ofUnicode.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofUnicode.cpp; path = src/Addons/ofxUnicode/src/ofUnicode.cpp; sourceTree = SOURCE_ROOT; };
 		6E3F47F486843AA062205007 /* main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = main.cpp; path = src/Main/main.cpp; sourceTree = SOURCE_ROOT; };
 		710357F0B933ECC723AB19BA /* TheOtherApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = TheOtherApp.cpp; path = src/Main/TheOtherApp.cpp; sourceTree = SOURCE_ROOT; };
@@ -126,32 +165,43 @@
 		73D7AA4CF4895FC3DEEC2978 /* SettingsManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = SettingsManager.cpp; path = src/Main/SettingsManager.cpp; sourceTree = SOURCE_ROOT; };
 		73DCC3AF2CF91782437F76A9 /* ofxSvg.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxSvg.cpp; path = src/Addons/ofxSvg/src/ofxSvg.cpp; sourceTree = SOURCE_ROOT; };
 		74A8BF0CC7FBBEF102057043 /* svgtiny.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = svgtiny.h; path = src/Addons/ofxSvg/libs/svgTiny/src/svgtiny.h; sourceTree = SOURCE_ROOT; };
+		78E61E440A21EE9FC6156AAD /* LayoutManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = LayoutManager.h; path = src/Layout/LayoutManager.h; sourceTree = SOURCE_ROOT; };
 		7982AEB5FFFD91D9A9906463 /* SvgVisual.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SvgVisual.h; path = src/Visuals/SvgVisual.h; sourceTree = SOURCE_ROOT; };
+		7CFECA4C864319E1EF0AB46A /* pre_container.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = pre_container.cc; path = "src/Addons/ofxVoro/libs/voro++/pre_container.cc"; sourceTree = SOURCE_ROOT; };
+		823D79437A6A095E05F86274 /* ofxVoro.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxVoro.h; path = src/Addons/ofxVoro/src/ofxVoro.h; sourceTree = SOURCE_ROOT; };
+		86052A643A89DF7744490162 /* ofxVoro.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxVoro.cpp; path = src/Addons/ofxVoro/src/ofxVoro.cpp; sourceTree = SOURCE_ROOT; };
 		882EAB7AA2A64CEF7FD8A60A /* ViewManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ViewManager.h; path = src/Visuals/ViewManager.h; sourceTree = SOURCE_ROOT; };
 		8B0005E54BF7A3BB8C207548 /* VisualEffectsManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = VisualEffectsManager.cpp; path = src/Visuals/VisualEffectsManager.cpp; sourceTree = SOURCE_ROOT; };
 		8C143F226588E1684FE7027A /* ViewManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ViewManager.cpp; path = src/Visuals/ViewManager.cpp; sourceTree = SOURCE_ROOT; };
+		916C96E4E8E0604C642682EF /* rad_option.hh */ = {isa = PBXFileReference; explicitFileType = file; fileEncoding = 30; name = rad_option.hh; path = "src/Addons/ofxVoro/libs/voro++/rad_option.hh"; sourceTree = SOURCE_ROOT; };
+		916F8D0D996C60C34BF7FA76 /* container_prd.hh */ = {isa = PBXFileReference; explicitFileType = file; fileEncoding = 30; name = container_prd.hh; path = "src/Addons/ofxVoro/libs/voro++/container_prd.hh"; sourceTree = SOURCE_ROOT; };
 		9BD3C8D3CE2F9DE9C86B751B /* utf8.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = utf8.h; path = src/Addons/ofxUnicode/libs/utf8cpp/include/utf8.h; sourceTree = SOURCE_ROOT; };
 		9ED2D89B10F4457477670D32 /* svgtiny.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = svgtiny.cpp; path = src/Addons/ofxSvg/libs/svgTiny/src/svgtiny.cpp; sourceTree = SOURCE_ROOT; };
+		A1947D4BB4AAA7F8148B5F03 /* v_base.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = v_base.cc; path = "src/Addons/ofxVoro/libs/voro++/v_base.cc"; sourceTree = SOURCE_ROOT; };
+		A29D1720797EDE49569165EF /* config.hh */ = {isa = PBXFileReference; explicitFileType = file; fileEncoding = 30; name = config.hh; path = "src/Addons/ofxVoro/libs/voro++/config.hh"; sourceTree = SOURCE_ROOT; };
 		A2E56F01EF0A1F4471EECBA5 /* TextVisual.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = TextVisual.cpp; path = src/Visuals/TextVisual.cpp; sourceTree = SOURCE_ROOT; };
 		A78E568E1B343F28663BF7AE /* ofxaddons_thumbnail.png */ = {isa = PBXFileReference; explicitFileType = file; fileEncoding = 30; name = ofxaddons_thumbnail.png; path = src/Addons/ofxFontStash/ofxaddons_thumbnail.png; sourceTree = SOURCE_ROOT; };
 		A7F27238F9FD8030ED3D1676 /* ReleaseNotes */ = {isa = PBXFileReference; explicitFileType = file; fileEncoding = 30; name = ReleaseNotes; path = src/Addons/ofxUnicode/libs/utf8cpp/src/utf8_v2_3_1/doc/ReleaseNotes; sourceTree = SOURCE_ROOT; };
 		A874153506A6F910899B3206 /* ofxFontStash.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxFontStash.cpp; path = src/Addons/ofxFontStash/src/ofxFontStash.cpp; sourceTree = SOURCE_ROOT; };
-		A896394D128D30AFB3318A1A /* LICENSE */ = {isa = PBXFileReference; explicitFileType = file; fileEncoding = 30; name = LICENSE; path = src/Addons/ofxVoronoi2D/LICENSE; sourceTree = SOURCE_ROOT; };
 		A8FCCFBFB6894301784A7CBA /* SvgVisual.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = SvgVisual.cpp; path = src/Visuals/SvgVisual.cpp; sourceTree = SOURCE_ROOT; };
 		B07078937D5FFD49205661FC /* unchecked.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = unchecked.h; path = src/Addons/ofxUnicode/libs/utf8cpp/include/utf8/unchecked.h; sourceTree = SOURCE_ROOT; };
 		B5C0F72C060657B91E05ABEC /* fontstash.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 30; name = fontstash.c; path = src/Addons/ofxFontStash/libs/fontstash/src/fontstash.c; sourceTree = SOURCE_ROOT; };
 		BA4818A00D1A94B5BFAA4BE4 /* BasicVisual.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = BasicVisual.h; path = src/Visuals/BasicVisual.h; sourceTree = SOURCE_ROOT; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
 		BC6582E355CB0B6EF83C47F3 /* ImageVisual.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ImageVisual.cpp; path = src/Visuals/ImageVisual.cpp; sourceTree = SOURCE_ROOT; };
+		BCAAB41E6AFCED5BF0E93979 /* common.hh */ = {isa = PBXFileReference; explicitFileType = file; fileEncoding = 30; name = common.hh; path = "src/Addons/ofxVoro/libs/voro++/common.hh"; sourceTree = SOURCE_ROOT; };
 		BF8A24D906675604DC2873AD /* ofTextConverter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofTextConverter.h; path = src/Addons/ofxUnicode/src/ofTextConverter.h; sourceTree = SOURCE_ROOT; };
 		C4DEA9B316209449F17ED538 /* ofUTF8.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofUTF8.cpp; path = src/Addons/ofxUnicode/src/ofUTF8.cpp; sourceTree = SOURCE_ROOT; };
 		C5C837BC8A64CCF1A788C49A /* checked.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = checked.h; path = src/Addons/ofxUnicode/libs/utf8cpp/include/utf8/checked.h; sourceTree = SOURCE_ROOT; };
 		C67FFE067AA927EC3CB8A812 /* ReadMe.md */ = {isa = PBXFileReference; explicitFileType = file; fileEncoding = 30; name = ReadMe.md; path = src/Addons/ofxFontStash/ReadMe.md; sourceTree = SOURCE_ROOT; };
+		C8A683C233C8C9F1E8768A0B /* pre_container.hh */ = {isa = PBXFileReference; explicitFileType = file; fileEncoding = 30; name = pre_container.hh; path = "src/Addons/ofxVoro/libs/voro++/pre_container.hh"; sourceTree = SOURCE_ROOT; };
+		C909F0FC37F07C58B334CD56 /* v_compute.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = v_compute.cc; path = "src/Addons/ofxVoro/libs/voro++/v_compute.cc"; sourceTree = SOURCE_ROOT; };
 		CCF85E6922E184D0E648BF78 /* Font.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Font.h; path = src/Tools/Font.h; sourceTree = SOURCE_ROOT; };
+		CE083735531A8231331EDBDD /* cell.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = cell.cc; path = "src/Addons/ofxVoro/libs/voro++/cell.cc"; sourceTree = SOURCE_ROOT; };
+		CFE81BEBC76B8FB296122D73 /* c_loops.hh */ = {isa = PBXFileReference; explicitFileType = file; fileEncoding = 30; name = c_loops.hh; path = "src/Addons/ofxVoro/libs/voro++/c_loops.hh"; sourceTree = SOURCE_ROOT; };
+		D0840413744045BFE0A9C17E /* common.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = common.cc; path = "src/Addons/ofxVoro/libs/voro++/common.cc"; sourceTree = SOURCE_ROOT; };
 		D26C09D837E4FD6CBDBE2B8C /* AppManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = AppManager.h; path = src/Main/AppManager.h; sourceTree = SOURCE_ROOT; };
-		DEB3953F2088ECDD20A04CAE /* ofxVoronoi2D.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxVoronoi2D.h; path = src/Addons/ofxVoronoi2D/src/ofxVoronoi2D.h; sourceTree = SOURCE_ROOT; };
-		E123E34E77F4A96F6D5C5926 /* VoronoiDiagramGenerator.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = VoronoiDiagramGenerator.h; path = src/Addons/ofxVoronoi2D/src/VoronoiDiagramGenerator.h; sourceTree = SOURCE_ROOT; };
-		E38F2139A3265534A8C7C65D /* VoronoiDiagramGenerator.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = VoronoiDiagramGenerator.cpp; path = src/Addons/ofxVoronoi2D/src/VoronoiDiagramGenerator.cpp; sourceTree = SOURCE_ROOT; };
+		E09C370728108AC653131E24 /* wall.hh */ = {isa = PBXFileReference; explicitFileType = file; fileEncoding = 30; name = wall.hh; path = "src/Addons/ofxVoro/libs/voro++/wall.hh"; sourceTree = SOURCE_ROOT; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
 		E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
@@ -168,10 +218,11 @@
 		E4C2424610CC5A17004149E2 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
 		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
 		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
-		E66EB415F2982872E2E5D92F /* ofxaddons_thumbnail.png */ = {isa = PBXFileReference; explicitFileType = file; fileEncoding = 30; name = ofxaddons_thumbnail.png; path = src/Addons/ofxVoronoi2D/ofxaddons_thumbnail.png; sourceTree = SOURCE_ROOT; };
 		E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		E7E077E715D3B6510020DFD4 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		E7F985F515E0DE99003869B5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = /System/Library/Frameworks/Accelerate.framework; sourceTree = "<absolute>"; };
+		F0876FBE59D7F32AABA2E791 /* c_loops.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = c_loops.cc; path = "src/Addons/ofxVoro/libs/voro++/c_loops.cc"; sourceTree = SOURCE_ROOT; };
+		F175BFDC71F9ACB7BC3946A7 /* README.md */ = {isa = PBXFileReference; explicitFileType = file; fileEncoding = 30; name = README.md; path = src/Addons/ofxVoro/README.md; sourceTree = SOURCE_ROOT; };
 		F3F5920A55F768ADF04E2ACD /* Font.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Font.cpp; path = src/Tools/Font.cpp; sourceTree = SOURCE_ROOT; };
 		F87FB35276B9CDD130045E81 /* VisualEffects.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = VisualEffects.h; path = src/Visuals/VisualEffects.h; sourceTree = SOURCE_ROOT; };
 		F94F04C2A3BFBCB8D6F36DEB /* Manager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Manager.h; path = src/Main/Manager.h; sourceTree = SOURCE_ROOT; };
@@ -205,15 +256,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		082E853C1A924AF300C321F0 /* Layout */ = {
-			isa = PBXGroup;
-			children = (
-				082E853D1A924AF300C321F0 /* LayoutManager.cpp */,
-				082E853E1A924AF300C321F0 /* LayoutManager.h */,
-			);
-			path = Layout;
-			sourceTree = "<group>";
-		};
 		0C2DD4E866068DD576043ABA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +263,15 @@
 				637C043FA664B485A0BA2DC2 /* ResourceManager.h */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		1684134ED1CADE5CE8B533E4 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				86052A643A89DF7744490162 /* ofxVoro.cpp */,
+				823D79437A6A095E05F86274 /* ofxVoro.h */,
+			);
+			name = src;
 			sourceTree = "<group>";
 		};
 		1E13716E1B359BAC38FB613E /* Tools */ = {
@@ -265,6 +316,19 @@
 			name = svgTiny;
 			sourceTree = "<group>";
 		};
+		375D8B140B52B55EB32EB487 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				4229475864D5EBC7913C8351 /* LayoutManager.cpp */,
+				78E61E440A21EE9FC6156AAD /* LayoutManager.h */,
+				0A53719DE810BC7FFE21D87A /* SeedVisual.cpp */,
+				03DB42A0115ED67D412CDA48 /* SeedVisual.h */,
+				099CE298999A45EE44FBF2DF /* VoronoiManager.cpp */,
+				6B76699C9C7FF573026BF2AA /* VoronoiManager.h */,
+			);
+			name = Layout;
+			sourceTree = "<group>";
+		};
 		38ECA533B103A14149BF2D04 /* src */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,17 +346,6 @@
 				38ECA533B103A14149BF2D04 /* src */,
 			);
 			name = fontstash;
-			sourceTree = "<group>";
-		};
-		6D5A34F46883A24CAD6793D0 /* ofxVoronoi2D */ = {
-			isa = PBXGroup;
-			children = (
-				A896394D128D30AFB3318A1A /* LICENSE */,
-				E66EB415F2982872E2E5D92F /* ofxaddons_thumbnail.png */,
-				62A97F720DDA0F14E62A65AE /* README.md */,
-				BC9FEE6AA7AD3230F7894867 /* src */,
-			);
-			name = ofxVoronoi2D;
 			sourceTree = "<group>";
 		};
 		8C2FB3644A7D2F8FE6CD8E69 /* ofxSvg */ = {
@@ -315,6 +368,17 @@
 			name = ofxFontStash;
 			sourceTree = "<group>";
 		};
+		9393BB288CBE3514898F7DB3 /* ofxVoro */ = {
+			isa = PBXGroup;
+			children = (
+				95F2993CFF2CD0513B1BD50E /* libs */,
+				0D5E8D81C507117CF9C76CFD /* ofxaddons_thumbnail.png */,
+				F175BFDC71F9ACB7BC3946A7 /* README.md */,
+				1684134ED1CADE5CE8B533E4 /* src */,
+			);
+			name = ofxVoro;
+			sourceTree = "<group>";
+		};
 		94BD1EADE301891794206609 /* utf8 */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +387,14 @@
 				B07078937D5FFD49205661FC /* unchecked.h */,
 			);
 			name = utf8;
+			sourceTree = "<group>";
+		};
+		95F2993CFF2CD0513B1BD50E /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				E44952AAA1A750FF5066ABA5 /* voro++ */,
+			);
+			name = libs;
 			sourceTree = "<group>";
 		};
 		98A510C95A4BFDE3D833A451 /* src */ = {
@@ -362,7 +434,7 @@
 				8CBDF20FDBDC8F559D1ABA59 /* ofxFontStash */,
 				8C2FB3644A7D2F8FE6CD8E69 /* ofxSvg */,
 				E169B214A1F94FFA3FFBBE8C /* ofxUnicode */,
-				6D5A34F46883A24CAD6793D0 /* ofxVoronoi2D */,
+				9393BB288CBE3514898F7DB3 /* ofxVoro */,
 			);
 			name = Addons;
 			sourceTree = "<group>";
@@ -440,16 +512,6 @@
 			isa = PBXGroup;
 			children = (
 				A1AD2E8041A523EBC38172E6 /* utf8_v2_3_1 */,
-			);
-			name = src;
-			sourceTree = "<group>";
-		};
-		BC9FEE6AA7AD3230F7894867 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				DEB3953F2088ECDD20A04CAE /* ofxVoronoi2D.h */,
-				E38F2139A3265534A8C7C65D /* VoronoiDiagramGenerator.cpp */,
-				E123E34E77F4A96F6D5C5926 /* VoronoiDiagramGenerator.h */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -532,6 +594,37 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		E44952AAA1A750FF5066ABA5 /* voro++ */ = {
+			isa = PBXGroup;
+			children = (
+				F0876FBE59D7F32AABA2E791 /* c_loops.cc */,
+				CFE81BEBC76B8FB296122D73 /* c_loops.hh */,
+				CE083735531A8231331EDBDD /* cell.cc */,
+				0C757F82453518EA35C4AECA /* cell.hh */,
+				D0840413744045BFE0A9C17E /* common.cc */,
+				BCAAB41E6AFCED5BF0E93979 /* common.hh */,
+				A29D1720797EDE49569165EF /* config.hh */,
+				08A8D2F77DDA12DD7F6C7EC6 /* container.cc */,
+				25AC067683FAB463643EE5FE /* container.hh */,
+				5ADA02019FB3D562D7C48A07 /* container_prd.cc */,
+				916F8D0D996C60C34BF7FA76 /* container_prd.hh */,
+				7CFECA4C864319E1EF0AB46A /* pre_container.cc */,
+				C8A683C233C8C9F1E8768A0B /* pre_container.hh */,
+				916C96E4E8E0604C642682EF /* rad_option.hh */,
+				6768F3AD3A9DB802FC5EDB5E /* unitcell.cc */,
+				22B200BC27DBC152B3DA229F /* unitcell.hh */,
+				A1947D4BB4AAA7F8148B5F03 /* v_base.cc */,
+				0C4C7CE9E09CC6494B468911 /* v_base.hh */,
+				C909F0FC37F07C58B334CD56 /* v_compute.cc */,
+				226082F85B27370F1946A916 /* v_compute.hh */,
+				298DD62CF32E098A08740F18 /* voro++.hh */,
+				4AFE9ABB7371DF487EFD2054 /* wall.cc */,
+				E09C370728108AC653131E24 /* wall.hh */,
+				46D73E9D472D7018A0A593FE /* worklist.hh */,
+			);
+			name = "voro++";
+			sourceTree = "<group>";
+		};
 		E45BE5980E8CC70C009D7055 /* frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -557,8 +650,8 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				082E853C1A924AF300C321F0 /* Layout */,
 				AD642137CCDF61FB3E6CCEA2 /* Addons */,
+				375D8B140B52B55EB32EB487 /* Layout */,
 				AF4FDCF7E02C59FCC5FE54A2 /* Main */,
 				0C2DD4E866068DD576043ABA /* Resources */,
 				1E13716E1B359BAC38FB613E /* Tools */,
@@ -688,11 +781,36 @@
 				20DD9BBB631FBC0CDCCFA6B6 /* ofTextConverter.cpp in Sources */,
 				7E78555D595408C86F902937 /* ofUnicode.cpp in Sources */,
 				EC108074DB75C3CD93A7DADF /* ofUTF8.cpp in Sources */,
-				FC1AFEA0D235EC15EB52DA18 /* LICENSE in Sources */,
-				10B5F7F59A7BC5E9D88D0B88 /* ofxaddons_thumbnail.png in Sources */,
-				082E853F1A924AF300C321F0 /* LayoutManager.cpp in Sources */,
-				2C307F601F9D172DED5DD745 /* README.md in Sources */,
-				8A66B80A725BF90636D1F48F /* VoronoiDiagramGenerator.cpp in Sources */,
+				CA504DD0663538C62EB142A0 /* c_loops.cc in Sources */,
+				DABCF5445EC1BD12FEAEE7AA /* c_loops.hh in Sources */,
+				E22D533D13492B8CE4F2DD4D /* cell.cc in Sources */,
+				A8504AB11437E681524D5CA8 /* cell.hh in Sources */,
+				6D37A0022404B769CB8DF8BD /* common.cc in Sources */,
+				E53850B783F2A07D78176896 /* common.hh in Sources */,
+				CC2C76300FC099C449D9B702 /* config.hh in Sources */,
+				2170AD05A3CB6E0A758910B3 /* container.cc in Sources */,
+				92B57D1B0CD48CC7AEA413C9 /* container.hh in Sources */,
+				1CDE687E4638B0D00FF32A31 /* container_prd.cc in Sources */,
+				0AD4B733F51922474594EAF0 /* container_prd.hh in Sources */,
+				426CCD9DAA55426821D9BD12 /* pre_container.cc in Sources */,
+				EB99DB18CB2BF689751C83E4 /* pre_container.hh in Sources */,
+				F96491D70761ED52CB441E4E /* rad_option.hh in Sources */,
+				61827184D71642D9EDE0D61D /* unitcell.cc in Sources */,
+				2CA5D279B384DAB545A36AC8 /* unitcell.hh in Sources */,
+				32303B580BEF0101A77D553F /* v_base.cc in Sources */,
+				977F942B13C9A4524C76524C /* v_base.hh in Sources */,
+				DF12413F6E2CA8692C0CBC29 /* v_compute.cc in Sources */,
+				D380740EE3A5ED9D343B4E69 /* v_compute.hh in Sources */,
+				21AF2280B55C1AF91D7D5DA8 /* voro++.hh in Sources */,
+				EB22CF296819336E6E858CA9 /* wall.cc in Sources */,
+				7CB7E48D81EF30030C363079 /* wall.hh in Sources */,
+				B0FA48FD636D984CF14697ED /* worklist.hh in Sources */,
+				5119C09895937E42000F9868 /* ofxaddons_thumbnail.png in Sources */,
+				6D78EDBC44255F05C7C14C2A /* README.md in Sources */,
+				5883BCBF7628D69511A3DA20 /* ofxVoro.cpp in Sources */,
+				93510377552D47B6620A7586 /* LayoutManager.cpp in Sources */,
+				641BA1DBF8F52AFBB63ADAAD /* SeedVisual.cpp in Sources */,
+				1C4129FD210B8CC821C4A6CC /* VoronoiManager.cpp in Sources */,
 				1AF15FCF93D2DDD6D4285C8E /* AppManager.cpp in Sources */,
 				DA22DA3A4F2E611DF50078F2 /* main.cpp in Sources */,
 				58BCEB4034B30CB4A3456FC7 /* SettingsManager.cpp in Sources */,
@@ -753,8 +871,10 @@
 					src/Addons/ofxUnicode/libs/utf8cpp/src/utf8_v2_3_1/source,
 					src/Addons/ofxUnicode/libs/utf8cpp/src/utf8_v2_3_1/source/utf8,
 					src/Addons/ofxUnicode/src,
-					src/Addons/ofxVoronoi2D,
-					src/Addons/ofxVoronoi2D/src,
+					src/Addons/ofxVoro,
+					"src/Addons/ofxVoro/libs/voro++",
+					src/Addons/ofxVoro/src,
+					src/Layout,
 					src/Main,
 					src/Resources,
 					src/Tools,
@@ -805,8 +925,10 @@
 					src/Addons/ofxUnicode/libs/utf8cpp/src/utf8_v2_3_1/source,
 					src/Addons/ofxUnicode/libs/utf8cpp/src/utf8_v2_3_1/source/utf8,
 					src/Addons/ofxUnicode/src,
-					src/Addons/ofxVoronoi2D,
-					src/Addons/ofxVoronoi2D/src,
+					src/Addons/ofxVoro,
+					"src/Addons/ofxVoro/libs/voro++",
+					src/Addons/ofxVoro/src,
+					src/Layout,
 					src/Main,
 					src/Resources,
 					src/Tools,

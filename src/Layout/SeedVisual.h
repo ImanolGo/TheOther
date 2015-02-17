@@ -11,7 +11,7 @@
 
 
 #include "BasicVisual.h"
-#include "ImageVisual.h"
+#include "ImageVisual3D.h"
 
 
 //=========================== class SeedVisual ==============================
@@ -46,7 +46,7 @@ protected:
     
 protected:
     
-    typedef vector<ofPtr<ImageVisual> >      ImageVector;            ///< defines a vector of images
+    typedef vector<ofPtr<ImageVisual3D> >      ImageVector;            ///< defines a vector of images
     
     ImageVector         m_images;           ///< vector storing the image visuals
     

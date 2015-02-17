@@ -9,7 +9,7 @@
 #pragma once
 
 #include "Manager.h"
-#include "Seed.h"
+#include "SeedVisual.h"
 
 //========================== class VoronoiManager ==============================
 //============================================================================
@@ -34,21 +34,29 @@ public:
     //! Set-up the Voronoi manager
     virtual void setup();
     
-    //! Set-up the layout
+    //! Update the voronoi manager
+    virtual void update();
+    
+    //! Draw the voronoi manager
     virtual void draw();
 
 private:
     
-    //! Set-up the Voronoi diagram
-    virtual void setupVoronoi();
+    //! Updates the the Voronoi diagram
+    virtual void updateVoronoi();
     
+    //! Create the seed visuals
+    virtual void createSeeds();
+    
+    //! Updates the seed visuals
+    virtual void updateSeeds();
     
     //! Create a 3D Voronoi Tissue
-    void createTissue(int _nCells, int _width, int _height, int _deep);
+    void createVoronoi(int _width, int _height, int _deep);
 
 private:
 
-    typedef vector< ofPtr<Seed> >      SeedVector;            ///< defines a vector of seeds
+    typedef vector< ofPtr<SeedVisual> >      SeedVector;            ///< defines a vector of seeds
     SeedVector              m_seeds; ///< voroni seeds
     ofMesh                  m_delaunayMesh; ///< mesh representing the delaunay triangulation
     

@@ -40,7 +40,7 @@ void VoronoiManager::setup()
 
 	Manager::setup();
     
-    this->setupVoronoi();
+    this->createSeeds();
 }
 
 void VoronoiManager::draw()
@@ -50,6 +50,14 @@ void VoronoiManager::draw()
     for (int i = 0; i < m_cellCentroids.size(); i++){
         ofSetColor(0);
         ofSphere(m_cellCentroids[i], m_cellRadius[i]*0.15);
+        m_seeds[i]->draw();
+    }
+    
+    for (int i = 0; i < m_seeds.size(); i++){
+       // ofPushMatrix();
+        //ofTranslate(m_seeds[i]->getPosition());
+        m_seeds[i]->draw();
+        //ofPopMatrix();
     }
     
     for(int i = 0; i < m_cellMeshes.size(); i++){
@@ -67,21 +75,56 @@ void VoronoiManager::draw()
     ofPopMatrix();
 }
 
-
-void VoronoiManager::setupVoronoi()
+void VoronoiManager::update()
 {
-    float appWidth =  AppManager::getInstance().getSettingsManager()->getAppWidth();
-    float appHeight = AppManager::getInstance().getSettingsManager()->getAppHeight();
-    int voronoiWidth = appWidth*0.9;
-    int voronoiHeight = appHeight*0.9;
-    int voronoiDepth = 20;
+    this->updateSeeds();
+    this->updateVoronoi();
+}
+
+void VoronoiManager::updateSeeds()
+{
+    float movementSpeed = .05;
+    float cloudSize = ofGetWidth() / 2;
+    float spacing = 1;
     
-    this->createTissue(NUMBER_OF_CELLS, voronoiWidth, voronoiHeight, voronoiDepth);
     
+    for(int i = 0; i < m_seeds.size(); i++) {
+        ofPushMatrix();
+        
+        float t = (ofGetElapsedTimef() + i * spacing) * movementSpeed;
+        ofVec3f pos(
+                    ofSignedNoise(t, 0, 0),
+                    ofSignedNoise(0, t, 0),
+                    0);
+        
+        pos *= cloudSize;
+        m_seeds[i]->setPosition(pos);
+    }
 }
 
 
-void VoronoiManager::createTissue(int _nCells, int _width, int _height, int _deep){
+void VoronoiManager::updateVoronoi()
+{
+    float appWidth =  AppManager::getInstance().getSettingsManager()->getAppWidth();
+    float appHeight = AppManager::getInstance().getSettingsManager()->getAppHeight();
+    int voronoiWidth = appWidth*1.2;
+    int voronoiHeight = appHeight*1.2;
+    int voronoiDepth = 30;
+    
+    this->createVoronoi(voronoiWidth, voronoiHeight, voronoiDepth);
+}
+
+void VoronoiManager::createSeeds()
+{
+    ofLogNotice() <<"VoronoiManager::createSeeds";
+    for (int i = 0; i < NUMBER_OF_CELLS; i++){
+        ofPtr<SeedVisual> seed = ofPtr<SeedVisual>(new SeedVisual(ofVec3f(0,0,0)));
+        m_seeds.push_back(seed);
+    }
+}
+
+
+void VoronoiManager::createVoronoi(int _width, int _height, int _deep){
     
     //  Fresh begining
     //
@@ -100,24 +143,10 @@ void VoronoiManager::createTissue(int _nCells, int _width, int _height, int _dee
                         8);
     
     
-    //  Add walls (un comment one pair if you like to shape the container)
-    //
-    //voro::wall_cylinder cyl(0,0,0,0,0,20, min(_width*0.5, _height*0.5));
-    //con.add_wall(cyl);
-    
-    //voro::wall_sphere sph(0, 0, 0, min(_width*0.5, _height*0.5) );
-    //con.add_wall(sph);
-    
-    //voro::wall_cone cone(0,0,min(_width*0.5, _height*0.5),0,0,-1,atan(0.5));
-    //con.add_wall(cone);
-    
     //  Add the cell seed to the container
     //
-    for(int i = 0; i < _nCells;i++){
-        ofPoint newCell = ofPoint(ofRandom(-_width*0.5,_width*0.5),
-                                  ofRandom(-_height*0.5,_height*0.5),
-                                  ofRandom(-_deep*0.5,_deep*0.5));
-        
+    for(int i = 0; i < m_seeds.size();i++){
+        ofPoint newCell = m_seeds[i]->getPosition();
         addCellSeed(con, newCell, i, true);
     }
     

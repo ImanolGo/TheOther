@@ -32,18 +32,37 @@ void SeedVisual::setup()
 
 void SeedVisual::createImageVisuals()
 {
-    string resourceName = "WaterColorTexture8";
-    ofPtr<ImageVisual> imageVisual = ofPtr<ImageVisual>(new ImageVisual(m_position,resourceName, true));
+    string resourceName = "SeedTexture";
+    ofPtr<ImageVisual3D> imageVisual = ofPtr<ImageVisual3D>(new ImageVisual3D(m_position,resourceName));
     ofColor color = AppManager::getInstance().getSettingsManager()->getColor("OuterRockColor");
-    imageVisual->setColor(color);
+    imageVisual->setScale(ofVec3f(0.1,0.1,1));
     m_images.push_back(imageVisual);
+    
+    /*resourceName = "WaterColorTexture8";
+    imageVisual = ofPtr<ImageVisual3D>(new ImageVisual3D(m_position,resourceName));
+    color = AppManager::getInstance().getSettingsManager()->getColor("MiddleRockColor");
+    imageVisual->setColor(color);
+    imageVisual->setScale(ofVec3f(0.1,0.1,1));
+    m_images.push_back(imageVisual);
+    
+    resourceName = "WaterColorTexture8";
+    imageVisual = ofPtr<ImageVisual3D>(new ImageVisual3D(m_position,resourceName));
+    color = AppManager::getInstance().getSettingsManager()->getColor("InnerRockColor");
+    imageVisual->setColor(color);
+    imageVisual->setScale(ofVec3f(0.08,0.08,1));
+    m_images.push_back(imageVisual);*/
+
 }
 
 
 void SeedVisual::draw()
 {
+    glEnable(GL_ALPHA_TEST);
+    glAlphaFunc(GL_GREATER, 0.1f);
     for(ImageVector::iterator it = m_images.begin(); it!= m_images.end(); ++it){
         (*it)->draw();
     }
+
+    glDisable(GL_ALPHA_TEST);
 }
 

@@ -10,6 +10,7 @@
 
 #include "AppManager.h"
 #include "ViewManager.h"
+#include "SeedsManager.h"
 
 #include "ofxVoro.h"
 
@@ -86,6 +87,12 @@ void VoronoiManager::createVoronoi(int _width, int _height, int _deep){
                         true,true,true,
                         8);
     
+    vector<ofVec3f> vertices = AppManager::getInstance().getSeedsManager()->getBillboardsVertices();
+    
+    //  Add the cell seed to the container
+    for (int i=0; i<vertices.size(); i++) {
+        addCellSeed(con, vertices[i], i, true);
+    }
     
     m_voronoiVisual->setCellMeshes(getCellsFromContainer(con,0.0));
     m_voronoiVisual->setCellMeshWireframes(getCellsFromContainer(con,0.0,true));

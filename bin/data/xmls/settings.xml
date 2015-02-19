@@ -10,6 +10,7 @@
   <textures>
   
   	<texture name="Background" path="images/general/background.jpg"/>
+  	<texture name="Dot" path="images/general/dot.png"/>
 
   	<texture name="SeedTexture" path="images/watercolors/seed_texture.png"/>
 

@@ -82,7 +82,7 @@ void AppManager::setupManagers()
 
 void AppManager::update()
 {
-    m_seedsManager->setup();
+    m_seedsManager->update();
     m_voronoiManager->update();
     m_visualEffectsManager->update();
     m_viewManager->update();

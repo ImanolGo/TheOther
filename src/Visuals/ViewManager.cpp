@@ -14,6 +14,7 @@
 
 #include "AppManager.h"
 #include "VoronoiManager.h"
+#include "SeedsManager.h"
 
 #include "ofMain.h"
 
@@ -122,6 +123,8 @@ void ViewManager::drawVisuals()
     glEnable(GL_DEPTH_TEST);
     
     AppManager::getInstance().getVoronoiManager()->draw();
+    
+    AppManager::getInstance().getSeedsManager()->draw();
     
     for(VisualList::iterator it = m_visuals.begin(); it != m_visuals.end(); it++) {
         ofPushMatrix();

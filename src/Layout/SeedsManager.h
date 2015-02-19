@@ -11,6 +11,8 @@
 #include "Manager.h"
 #include "Seed.h"
 
+#define NUM_BILLBOARDS 500
+
 //========================== class SeedsManager ==============================
 //============================================================================
 /** \class SeedsManager SeedsManager.h
@@ -31,14 +33,13 @@ public:
     //! Destructor
     ~SeedsManager();
 
-    //! Set-up the Voronoi manager
     virtual void setup();
     
-    //! Update the voronoi manager
     virtual void update();
     
-    //! Draw the voronoi manager
     virtual void draw();
+    
+    vector<ofVec3f>&  getBillboardsVertices(){return billboards.getVertices();}
 
 private:
     
@@ -48,11 +49,22 @@ private:
     //! Create the seed visuals
     virtual void createSeeds();
     
+    virtual void setupBillboardShader();
+    
 
 private:
 
     typedef vector< ofPtr<Seed> >      SeedVector;            ///< defines a vector of seeds
     SeedVector              m_seeds; ///< voroni seeds
+    
+    // billboard particles
+    float billboardSizeTarget[NUM_BILLBOARDS];
+    
+    ofShader billboardShader;
+    ofPtr<ofTexture> texture;
+    
+    ofVboMesh billboards;
+    ofVec3f billboardVels[NUM_BILLBOARDS];
 };
 
 //==========================================================================

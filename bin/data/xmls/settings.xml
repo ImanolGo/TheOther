@@ -43,9 +43,9 @@
 
   <colors>
  
-	<color name="OuterRockColor" r="132" g="35" b="41"/>
-	<color name="MiddleRockColor" r="41" g="52" b="68"/>
-	<color name="InnerRockColor" r="176" g="169" b="96"/>
+	<color name="RockColor1" r="132" g="35" b="41"/>
+	<color name="RockColor2" r="41" g="52" b="68"/>
+	<color name="RockColor3" r="176" g="169" b="96"/>
 	
   </colors>
 

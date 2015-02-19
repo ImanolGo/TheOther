@@ -18,6 +18,7 @@
 #include "LayoutManager.h"
 #include "SettingsManager.h"
 #include "VoronoiManager.h"
+#include "SeedsManager.h"
 
 //========================== class AppManager ==============================
 //============================================================================
@@ -67,6 +68,9 @@ public:
     
     //! Returns the voronoi manager
     ofPtr<VoronoiManager>   getVoronoiManager() { return m_voronoiManager; }
+    
+    //! Returns the seeds manager
+    ofPtr<SeedsManager>   getSeedsManager() { return m_seedsManager; }
 
 private:
 
@@ -102,6 +106,7 @@ private:
     ofPtr<VisualEffectsManager>     m_visualEffectsManager;     ///< Manages visual effects
     ofPtr<LayoutManager>            m_layoutManager;            ///< Manages the layout
     ofPtr<VoronoiManager>           m_voronoiManager;           ///< Manages the voronoi diagram
+    ofPtr<SeedsManager>             m_seedsManager;             ///< Manages the seeds diagram
 
     bool                            m_logVerbose;
 };

@@ -41,6 +41,7 @@ void AppManager::createManagers()
 	m_viewManager = ofPtr<ViewManager>(new ViewManager());
     m_layoutManager = ofPtr<LayoutManager>(new LayoutManager());
     m_voronoiManager = ofPtr<VoronoiManager>(new VoronoiManager());
+    m_seedsManager = ofPtr<SeedsManager>(new SeedsManager());
 
 }
 
@@ -76,10 +77,12 @@ void AppManager::setupManagers()
     m_visualEffectsManager->setup();
     m_layoutManager->setup();
     m_voronoiManager->setup();
+    m_seedsManager->setup();
 }
 
 void AppManager::update()
 {
+    m_seedsManager->setup();
     m_voronoiManager->update();
     m_visualEffectsManager->update();
     m_viewManager->update();

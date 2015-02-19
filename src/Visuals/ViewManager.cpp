@@ -18,7 +18,7 @@
 #include "ofMain.h"
 
 
-ViewManager::ViewManager(): m_showDebugInfo(false)
+ViewManager::ViewManager(): m_showDebugInfo(true)
 {
 	// intentionally left empty
 }
@@ -65,7 +65,10 @@ void ViewManager::setupGL()
 
 void ViewManager::setup3D()
 {
-    m_light.setPosition(100,500, 100);
+    m_light.setPosition(0,0,100);
+    m_light.setAmbientColor(ofFloatColor(1.0f, 1.0f,1.0f, 1.0f));
+    m_light.setDiffuseColor(ofFloatColor(1.0f, 1.0f,1.0f, 1.0f));
+    m_light.setSpecularColor(ofFloatColor(1.0f, 1.0f,1.0f, 1.0f));
     m_cam.setAutoDistance(true);
 }
 
@@ -112,6 +115,7 @@ void ViewManager::draw()
 
 void ViewManager::drawVisuals()
 {
+    ofEnableAlphaBlending();
     m_cam.begin();
     m_light.enable();
     ofEnableLighting();
@@ -129,16 +133,19 @@ void ViewManager::drawVisuals()
     ofDisableLighting();
     m_light.disable();
     m_cam.end();
+    ofDisableAlphaBlending();
 }
 
 void ViewManager::drawOverlays()
 {
+    ofEnableAlphaBlending();
     for(OverlayList::reverse_iterator it = m_overlays.rbegin(); it != m_overlays.rend(); it++)
     {
 		ofPushMatrix();
 		it->second->draw();
 		ofPopMatrix();
 	}
+    ofDisableAlphaBlending();
 
 }
 

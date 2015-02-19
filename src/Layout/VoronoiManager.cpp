@@ -9,7 +9,6 @@
 #include "ofMain.h"
 
 #include "AppManager.h"
-#include "SettingsManager.h"
 #include "ViewManager.h"
 
 #include "ofxVoro.h"
@@ -17,7 +16,6 @@
 
 #include "VoronoiManager.h"
 
-const int VoronoiManager::NUMBER_OF_CELLS = 100;
 
 VoronoiManager::VoronoiManager()
 {
@@ -40,68 +38,28 @@ void VoronoiManager::setup()
 
 	Manager::setup();
     
-    this->createSeeds();
+    this->createVoronoiVisual();
+    
+}
+
+void VoronoiManager::createVoronoiVisual()
+{
+    ofVec3f initialPosition = ofVec3f(0,0,0);
+    m_voronoiVisual = ofPtr<VoronoiVisual> (new VoronoiVisual(initialPosition));
+    AppManager::getInstance().getViewManager()->addVisual(m_voronoiVisual);
 }
 
 void VoronoiManager::draw()
 {
     ofPushMatrix();
-    
-    for (int i = 0; i < m_cellCentroids.size(); i++){
-        ofSetColor(0);
-        ofSphere(m_cellCentroids[i], m_cellRadius[i]*0.15);
-        m_seeds[i]->draw();
-    }
-    
-    for (int i = 0; i < m_seeds.size(); i++){
-       // ofPushMatrix();
-        //ofTranslate(m_seeds[i]->getPosition());
-        m_seeds[i]->draw();
-        //ofPopMatrix();
-    }
-    
-    for(int i = 0; i < m_cellMeshes.size(); i++){
-        ofSetColor(100,0,0,30);
-        //ofSetColor(ofRandom(255),30);
-        m_cellMeshes[i].drawFaces();
-        
-        ofPushStyle();
-        ofSetLineWidth(3);
-        ofSetColor(100);
-        m_cellMeshWireframes[i].draw();
-        ofPopStyle();
-    }
-    
+        //m_voronoiVisual->draw();
     ofPopMatrix();
 }
 
 void VoronoiManager::update()
 {
-    this->updateSeeds();
     this->updateVoronoi();
 }
-
-void VoronoiManager::updateSeeds()
-{
-    float movementSpeed = .05;
-    float cloudSize = ofGetWidth() / 2;
-    float spacing = 1;
-    
-    
-    for(int i = 0; i < m_seeds.size(); i++) {
-        ofPushMatrix();
-        
-        float t = (ofGetElapsedTimef() + i * spacing) * movementSpeed;
-        ofVec3f pos(
-                    ofSignedNoise(t, 0, 0),
-                    ofSignedNoise(0, t, 0),
-                    0);
-        
-        pos *= cloudSize;
-        m_seeds[i]->setPosition(pos);
-    }
-}
-
 
 void VoronoiManager::updateVoronoi()
 {
@@ -114,23 +72,9 @@ void VoronoiManager::updateVoronoi()
     this->createVoronoi(voronoiWidth, voronoiHeight, voronoiDepth);
 }
 
-void VoronoiManager::createSeeds()
-{
-    ofLogNotice() <<"VoronoiManager::createSeeds";
-    for (int i = 0; i < NUMBER_OF_CELLS; i++){
-        ofPtr<SeedVisual> seed = ofPtr<SeedVisual>(new SeedVisual(ofVec3f(0,0,0)));
-        m_seeds.push_back(seed);
-    }
-}
-
 
 void VoronoiManager::createVoronoi(int _width, int _height, int _deep){
     
-    //  Fresh begining
-    //
-    m_cellMeshes.clear();
-    m_cellCentroids.clear();
-    m_cellRadius.clear();
     
     //  Define a container
     //
@@ -143,19 +87,10 @@ void VoronoiManager::createVoronoi(int _width, int _height, int _deep){
                         8);
     
     
-    //  Add the cell seed to the container
-    //
-    for(int i = 0; i < m_seeds.size();i++){
-        ofPoint newCell = m_seeds[i]->getPosition();
-        addCellSeed(con, newCell, i, true);
-    }
-    
-    
-    
-    m_cellMeshes = getCellsFromContainer(con,0.0);
-    m_cellMeshWireframes = getCellsFromContainer(con,0.0,true);
-    m_cellRadius = getCellsRadius(con);
-    m_cellCentroids = getCellsCentroids(con);
+    m_voronoiVisual->setCellMeshes(getCellsFromContainer(con,0.0));
+    m_voronoiVisual->setCellMeshWireframes(getCellsFromContainer(con,0.0,true));
+    m_voronoiVisual->setCellRadius(getCellsRadius(con));
+    m_voronoiVisual->setCellCentroids(getCellsCentroids(con));
 }
 
 

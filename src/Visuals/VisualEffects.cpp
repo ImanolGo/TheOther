@@ -18,7 +18,7 @@
 //==============================================================================
 
 
-VisualEffect::VisualEffect(ofPtr<BasicVisual> visual, EasingFunction function, EasingType type): m_visual(visual), m_function(function), m_isActive(false), m_animationTime(1000.0), m_elapsedTime(0.0),	m_elaspedTimeToStart(0.0), m_type(type)
+VisualEffect::VisualEffect(ofPtr<BasicVisual> visual, EasingFunction function, EasingType type): m_visual(visual), m_function(function), m_isActive(false), m_animationTime(1000.0), m_elapsedTime(0.0),	m_elaspedTimeToStart(0.0), m_type(type), m_isFinished(false)
 {
 	// intentionally left empty
 }
@@ -29,6 +29,7 @@ void VisualEffect::start(double startTime)
     m_elapsedTime = 0.0;
 	m_elaspedTimeToStart = 0.0;
 	m_isActive = true;
+    m_isFinished = false;
 	m_startTime = startTime;
 }
 
@@ -36,12 +37,11 @@ void VisualEffect::start(double startTime)
 void VisualEffect::stop()
 {
 	m_isActive = false;
-	AppManager::getInstance().getVisualEffectsManager()->removeVisualEffect(this);
 }
 
 void VisualEffect::finish()
 {
-	AppManager::getInstance().getVisualEffectsManager()->removeVisualEffect(this);
+    m_isFinished = true;
 }
 
 double VisualEffect::function(double t, double from, double to, double duration) const
@@ -241,6 +241,10 @@ void FadeVisual::setParameters(double endAlpha, double animationTime)
 
 void FadeVisual::update()
 {
+    if(!m_isActive){
+        return;
+    }
+    
 	double dt = ofGetLastFrameTime();
 
     if(m_elaspedTimeToStart < m_startTime) {
@@ -293,7 +297,11 @@ void ScaleVisual::setParameters(const ofVec3f& startScale,const ofVec3f& endScal
 
 void ScaleVisual::update()
 {
-	double dt = ofGetLastFrameTime();
+    if(!m_isActive){
+        return;
+    }
+    
+    double dt = ofGetLastFrameTime();
 
     if(m_elaspedTimeToStart < m_startTime) {
         m_elaspedTimeToStart += dt;
@@ -344,7 +352,11 @@ void MoveVisual::setParameters(const ofVec3f& startPos,const ofVec3f& endPos, do
 
 void MoveVisual::update()
 {
-	double dt = ofGetLastFrameTime();
+    if(!m_isActive){
+        return;
+    }
+    
+    double dt = ofGetLastFrameTime();
 
     if(m_elaspedTimeToStart < m_startTime) {
         m_elaspedTimeToStart += dt;
@@ -397,7 +409,11 @@ void ColorEffect::setParameters(const ofColor& startColor,const ofColor& endColo
 
 void ColorEffect::update()
 {
-	double dt = ofGetLastFrameTime();
+    if(!m_isActive){
+        return;
+    }
+    
+    double dt = ofGetLastFrameTime();
 
     if(m_elaspedTimeToStart < m_startTime) {
         m_elaspedTimeToStart += dt;

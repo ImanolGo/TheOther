@@ -21,7 +21,7 @@ AppManager& AppManager::getInstance()
 
 }
 
-AppManager::AppManager(): m_logVerbose(false)
+AppManager::AppManager(): Manager(), m_logVerbose(false)
 {
     this->createManagers();
 }

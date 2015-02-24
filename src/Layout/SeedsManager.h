@@ -11,7 +11,7 @@
 #include "Manager.h"
 #include "Seed.h"
 
-#define NUM_BILLBOARDS 500
+#define NUM_BILLBOARDS 100
 
 //========================== class SeedsManager ==============================
 //============================================================================
@@ -65,6 +65,8 @@ private:
     
     ofVboMesh billboards;
     ofVec3f billboardVels[NUM_BILLBOARDS];
+    
+    ofImage image;
 };
 
 //==========================================================================

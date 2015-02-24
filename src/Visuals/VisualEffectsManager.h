@@ -39,7 +39,8 @@ public:
 	void update();
 
 	//! Removes a certain visual effect from the list
-	void removeVisualEffect(const VisualEffect* visualEffect);
+	void removeVisualEffect(ofPtr<VisualEffect>  visualEffect);
+    
 
 	//! Removes all visual effects for the specified visual
 	void removeAllVisualEffects(ofPtr<BasicVisual> visual);

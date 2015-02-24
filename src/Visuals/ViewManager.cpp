@@ -19,7 +19,7 @@
 #include "ofMain.h"
 
 
-ViewManager::ViewManager(): m_showDebugInfo(true)
+ViewManager::ViewManager(): Manager(), m_showDebugInfo(true)
 {
 	// intentionally left empty
 }
@@ -117,6 +117,7 @@ void ViewManager::draw()
 void ViewManager::drawVisuals()
 {
     ofEnableAlphaBlending();
+    
     m_cam.begin();
     m_light.enable();
     ofEnableLighting();

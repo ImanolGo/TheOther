@@ -14,6 +14,18 @@
 
 const int ResourceManager::DEFAULT_IMAGE_SIZE = 256;
 
+
+ResourceManager::ResourceManager() : Manager()
+{
+    //Intentionally left empty
+}
+
+ResourceManager::~ResourceManager()
+{
+    ofLogNotice() <<"ResourceManager::destructor" ;
+}
+
+
 void ResourceManager::setup()
 {
     if(m_initialized)

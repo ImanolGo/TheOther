@@ -15,7 +15,7 @@
 
 #include "LayoutManager.h"
 
-LayoutManager::LayoutManager()
+LayoutManager::LayoutManager(): Manager()
 {
 	//Intentionally left empty
 }

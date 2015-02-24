@@ -8,7 +8,7 @@
 
 #include "VisualEffectsManager.h"
 
-VisualEffectsManager::VisualEffectsManager()
+VisualEffectsManager::VisualEffectsManager(): Manager()
 {
 	// intentionally left empty
 }
@@ -32,8 +32,16 @@ void VisualEffectsManager::setup()
 
 void VisualEffectsManager::update()
 {
-	for ( unsigned int i = 0; i < m_visualEffects.size(); i++ ) {
-		m_visualEffects[i]->update();
+    for(VisualEffectVector::iterator it = m_visualEffects.begin(); it != m_visualEffects.end();)
+    {
+        (*it)->update();
+        
+        if((*it)->isFinished()) {
+            it = m_visualEffects.erase(it);
+        }
+        else{
+            ++it;
+        }
     }
 }
 
@@ -50,14 +58,14 @@ void VisualEffectsManager::addVisualEffect(ofPtr<VisualEffect> visualEffect)
 	m_visualEffects.push_back(visualEffect);
 }
 
-void VisualEffectsManager::removeVisualEffect(const VisualEffect* visualEffect)
+void VisualEffectsManager::removeVisualEffect(ofPtr<VisualEffect> visualEffect)
 {
     if(!visualEffect)
         return;
 
 	for(VisualEffectVector::iterator it = m_visualEffects.begin(); it != m_visualEffects.end();)
     {
-		if(it->get() == visualEffect) {
+		if(*it == visualEffect) {
 			it = m_visualEffects.erase(it);
 		}
         else{

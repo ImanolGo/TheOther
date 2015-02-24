@@ -2,7 +2,7 @@
  *  BasicVisual.h
  *  The Other
  *
- *  Created by Imanol G—mez on 16/02/15.
+ *  Created by Imanol Gomez on 16/02/15.
  *
  */
 

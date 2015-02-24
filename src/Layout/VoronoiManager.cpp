@@ -18,7 +18,7 @@
 #include "VoronoiManager.h"
 
 
-VoronoiManager::VoronoiManager()
+VoronoiManager::VoronoiManager(): Manager()
 {
 	//Intentionally left empty
 }
@@ -66,9 +66,9 @@ void VoronoiManager::updateVoronoi()
 {
     float appWidth =  AppManager::getInstance().getSettingsManager()->getAppWidth();
     float appHeight = AppManager::getInstance().getSettingsManager()->getAppHeight();
-    int voronoiWidth = appWidth*1.2;
-    int voronoiHeight = appHeight*1.2;
-    int voronoiDepth = 30;
+    int voronoiWidth = appWidth*1.3;
+    int voronoiHeight = appHeight*1.3;
+    int voronoiDepth = 1;
     
     this->createVoronoi(voronoiWidth, voronoiHeight, voronoiDepth);
 }
@@ -86,6 +86,18 @@ void VoronoiManager::createVoronoi(int _width, int _height, int _deep){
                         1,1,1,
                         true,true,true,
                         8);
+    
+    
+    //  Add walls (un comment one pair if you like to shape the container)
+    //
+    //voro::wall_cylinder cyl(0,0,0,0,0,20, min(_width*0.5, _height*0.5));
+    //con.add_wall(cyl);
+    
+    //voro::wall_sphere sph(0, 0, 0, min(_width*0.5, _height*0.5) );
+    //con.add_wall(sph);
+    
+    //voro::wall_cone cone(0,0,min(_width*0.5, _height*0.5),0,0,-1,atan(0.5));
+    //con.add_wall(cone);
     
     vector<ofVec3f> vertices = AppManager::getInstance().getSeedsManager()->getBillboardsVertices();
     

@@ -2,7 +2,7 @@
  *  ResourceManager.h
  *  The Other
  *
- *  Created by Imanol G—mez on 16/02/15.
+ *  Created by Imanol Gomez on 16/02/15.
  *
  */
 
@@ -27,9 +27,9 @@ class ResourceManager: public Manager
 	public:
 
 		//! Constructor.
-		ResourceManager() {}
+        ResourceManager();
 		//! Destructor.
-		~ResourceManager() {}
+        ~ResourceManager();
 
 		//! Initializes the resource manager.
 		void setup();

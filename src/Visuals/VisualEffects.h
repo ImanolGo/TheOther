@@ -8,7 +8,6 @@
 
 #pragma once
 
-#include <vector>
 
 #include "ofMain.h"
 
@@ -70,6 +69,9 @@ public:
 
     //! Returns the current state of the animation
 	bool isActive() const { return m_isActive; }
+    
+    //! Returns if the animation is finished
+    bool isFinished() const { return m_isFinished; }
 
 	//! Set the elapsed time before the start of the animation
 	void setElapsedTimeToStart(double time) { m_elaspedTimeToStart = time; }
@@ -85,6 +87,7 @@ protected:
 
 	ofPtr<BasicVisual>     	m_visual;				///< stores the visual as a shared pointer (ofPtr)
 	bool					m_isActive;				///< determines whether an animation is currently updated or not
+    bool					m_isFinished;           ///< determines whether an animation is finished
 	double					m_animationTime;		///< duration of the animation in ms
 	double					m_elapsedTime;			///< elapsed time since the last update
 	EasingFunction			m_function;				///< saves what kind of easing function do you want to use

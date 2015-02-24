@@ -42,7 +42,7 @@ void VoronoiVisual::draw()
         
         ofTranslate(m_position);
         for(int i = 0; i < m_cellMeshes.size(); i++){
-            ofSetColor(100,50);
+            ofSetColor(100,200);
             //ofSetColor(ofRandom(255),30);
             m_cellMeshes[i].drawFaces();
         

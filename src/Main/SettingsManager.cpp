@@ -11,15 +11,14 @@
 
 #include "SettingsManager.h"
 
-SettingsManager::SettingsManager(): m_appHeight(0.0), m_appWidth(0.0)
+SettingsManager::SettingsManager(): Manager(), m_appHeight(0.0), m_appWidth(0.0)
 {
-	///create all managers
+	//Intentionally left empty
 }
 
 
 SettingsManager::~SettingsManager()
 {
-    //this->saveButtonSettings();
     ofLogNotice() <<"SettingsManager::Destructor" ;
 }
 

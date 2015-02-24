@@ -1,16 +1,13 @@
-/*==============================================================================
- Copyright (c) Ars Electronica Solutions, 2014
- ==============================================================================*/
-/*! \file Button.h
- * \authors
- * \copyright{2014}
- * \comments{Based on ofxFontStash from Oriol Ferrer Mesià }
- *///============================================================================
+/*
+ *  Font.cpp
+ *  The Other
+ *
+ *  Created by Imanol Gomez on 23/02/15.
+ *
+ */
 
 
-
-#ifndef __FONT_H__
-#define __FONT_H__
+#pragma once
 
 #define FONT_HEIGHT_MULT  0.8
 
@@ -62,4 +59,3 @@ class Font{
 };
 
 
-#endif

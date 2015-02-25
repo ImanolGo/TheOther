@@ -66,8 +66,8 @@ void VoronoiManager::updateVoronoi()
 {
     float appWidth =  AppManager::getInstance().getSettingsManager()->getAppWidth();
     float appHeight = AppManager::getInstance().getSettingsManager()->getAppHeight();
-    int voronoiWidth = appWidth*1.3;
-    int voronoiHeight = appHeight*1.3;
+    int voronoiWidth = appWidth*1.5;
+    int voronoiHeight = appHeight*1.5;
     int voronoiDepth = 1;
     
     this->createVoronoi(voronoiWidth, voronoiHeight, voronoiDepth);
@@ -99,7 +99,7 @@ void VoronoiManager::createVoronoi(int _width, int _height, int _deep){
     //voro::wall_cone cone(0,0,min(_width*0.5, _height*0.5),0,0,-1,atan(0.5));
     //con.add_wall(cone);
     
-    vector<ofVec3f> vertices = AppManager::getInstance().getSeedsManager()->getBillboardsVertices();
+    vector<ofVec3f> vertices = AppManager::getInstance().getSeedsManager()->getSeedsVertices();
     
     //  Add the cell seed to the container
     for (int i=0; i<vertices.size(); i++) {

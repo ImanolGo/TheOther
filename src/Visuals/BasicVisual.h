@@ -22,13 +22,16 @@ class BasicVisual
     public:
 
         //! Constructor
+        BasicVisual():m_width(0), m_height(0), m_position(ofVec3f(0,0,0)), m_scale(ofVec3f(1,1,1)) {}
+    
+        //! Constructor
         BasicVisual(const ofVec3f& pos, float width, float height): m_position(pos), m_width(width), m_height(height), m_scale(ofVec3f(1,1,1)) {}
 
         //! Destructor
         virtual ~BasicVisual(){}
 
         //! Draws the BasicVisual
-        virtual void draw() = 0;
+        virtual void draw(){}
 
         //! Changes the alpha channel.
         virtual void setAlpha(double alpha) { m_color.set(m_color.r,m_color.g,m_color.b,alpha);}

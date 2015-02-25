@@ -8,7 +8,8 @@
 
 
 #include "KeyboardManager.h"
-#include "StateMachine.h"
+#include "StateManager.h"
+#include "AppManager.h"
 
 
 KeyboardManager::KeyboardManager(): Manager()
@@ -37,18 +38,19 @@ void KeyboardManager::setup()
 void KeyboardManager::keyPressed(int key)
 {
     if(key == '1'){
-        ofEvent<string> changeStateEvent;
-         //StateMachine::changeStateEvent changeState;
-        //ofNotifyEvent(changeStateEvent, "SimpleVoronoiState");
-	}
+        AppManager::getInstance().getStateManager()->changeState("SimpleVoronoiState");
+    }
 
     else if(key == '2'){
+        AppManager::getInstance().getStateManager()->changeState("SimpleVoronoiState");
 		//ofNotifyEvent(StateMachine::changeStateEvent, "WallState");
 	}
 	else if(key == '3'){
+        AppManager::getInstance().getStateManager()->changeState("SimpleVoronoiState");
 		//ofNotifyEvent(StateMachine::changeStateEvent, "VoronoiTransformationState");
 	}
 	else if(key == '4'){
+       AppManager::getInstance().getStateManager()->changeState("SimpleVoronoiState");
 		//ofNotifyEvent(StateMachine::changeStateEvent, "ParticlesVoronoiState");
 	}
 }

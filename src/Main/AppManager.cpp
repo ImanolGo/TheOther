@@ -42,6 +42,8 @@ void AppManager::createManagers()
     m_layoutManager = ofPtr<LayoutManager>(new LayoutManager());
     m_voronoiManager = ofPtr<VoronoiManager>(new VoronoiManager());
     m_seedsManager = ofPtr<SeedsManager>(new SeedsManager());
+    m_stateManager = ofPtr<StateManager>(new StateManager());
+    m_keyboardManager = ofPtr<KeyboardManager>(new KeyboardManager());
 
 }
 
@@ -78,6 +80,7 @@ void AppManager::setupManagers()
     m_layoutManager->setup();
     m_voronoiManager->setup();
     m_seedsManager->setup();
+    m_stateManager->setup();
 }
 
 void AppManager::update()

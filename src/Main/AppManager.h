@@ -19,6 +19,8 @@
 #include "SettingsManager.h"
 #include "VoronoiManager.h"
 #include "SeedsManager.h"
+#include "StateManager.h"
+#include "KeyboardManager.h"
 
 //========================== class AppManager ==============================
 //============================================================================
@@ -71,6 +73,9 @@ public:
     
     //! Returns the seeds manager
     ofPtr<SeedsManager>   getSeedsManager() { return m_seedsManager; }
+    
+    //! Returns the state manager
+    ofPtr<StateManager>   getStateManager() { return m_stateManager; }
 
 private:
 
@@ -107,6 +112,8 @@ private:
     ofPtr<LayoutManager>            m_layoutManager;            ///< Manages the layout
     ofPtr<VoronoiManager>           m_voronoiManager;           ///< Manages the voronoi diagram
     ofPtr<SeedsManager>             m_seedsManager;             ///< Manages the seeds diagram
+    ofPtr<StateManager>             m_stateManager;             ///< Manages the stage machine
+    ofPtr<KeyboardManager>          m_keyboardManager;          ///< Manages the keyboard
 
     bool                            m_logVerbose;
 };

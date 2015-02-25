@@ -2,7 +2,7 @@
  *  SeedsManager.h
  *  The Other
  *
- *  Created by Imanol Gómez on 19/02/15.
+ *  Created by Imanol Gomez on 19/02/15.
  *
  */
 
@@ -11,7 +11,8 @@
 #include "Manager.h"
 #include "Seed.h"
 
-#define NUM_BILLBOARDS 100
+#define NUMBER_OF_SEEDS 100
+#define NUMBER_OF_PARTICLES 2000
 
 //========================== class SeedsManager ==============================
 //============================================================================
@@ -22,8 +23,6 @@
 
 class SeedsManager: public Manager
 {
-    
-    static const int NUMBER_OF_SEEDS;
     
 public:
 
@@ -39,7 +38,7 @@ public:
     
     virtual void draw();
     
-    vector<ofVec3f>&  getBillboardsVertices(){return billboards.getVertices();}
+    vector<ofVec3f>&  getSeedsVertices(){return m_seeds.getVertices();}
 
 private:
     
@@ -51,22 +50,31 @@ private:
     
     virtual void setupBillboardShader();
     
+    virtual void createReferenceVisual();
+    
 
 private:
 
-    typedef vector< ofPtr<Seed> >      SeedVector;            ///< defines a vector of seeds
-    SeedVector              m_seeds; ///< voroni seeds
+    //typedef vector< ofPtr<Seed> >      SeedVector;            ///< defines a vector of seeds
+    //SeedVector              m_seeds; ///< voroni seeds
     
     // billboard particles
-    float billboardSizeTarget[NUM_BILLBOARDS];
+    
     
     ofShader billboardShader;
     ofPtr<ofTexture> texture;
     
-    ofVboMesh billboards;
-    ofVec3f billboardVels[NUM_BILLBOARDS];
+    float m_seedsSizeTarget[NUMBER_OF_SEEDS];
+    ofVboMesh m_seeds;
+    ofVec3f m_seedsVels[NUMBER_OF_SEEDS];
+    
+    float m_sparticlesSizeTarget[NUMBER_OF_PARTICLES];
+    ofVboMesh m_particles;
+    ofVec3f m_particlesVels[NUMBER_OF_PARTICLES];
     
     ofImage image;
+    
+    ofPtr<BasicVisual> m_referenceVisual;
 };
 
 //==========================================================================

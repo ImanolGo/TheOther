@@ -24,25 +24,27 @@
 class StateManager: public Manager
 {
 public:
-
+    
     //! Constructor
     StateManager();
-
+    
     //! Destructor
     ~StateManager();
 
     //! Setups the state machine
     void setup();
+    
+    //! Change to a state
+    void changeState(string name);
 
 private:
-
+    
 	//! Creates all states
 	void createStates();
 
 	//! Creates the state manager
 	void createStateMachine();
-
-
+    
 private:
 
     ofPtr<StateMachine>	  m_stateMachine;	///< current state machine

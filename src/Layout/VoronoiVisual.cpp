@@ -44,7 +44,7 @@ void VoronoiVisual::draw()
         for(int i = 0; i < m_cellMeshes.size(); i++){
             ofSetColor(100,200);
             //ofSetColor(ofRandom(255),30);
-            m_cellMeshes[i].drawFaces();
+            //m_cellMeshes[i].drawFaces();
         
             ofPushStyle();
             ofSetLineWidth(3);

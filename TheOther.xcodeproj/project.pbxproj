@@ -292,8 +292,8 @@
 		0C2DD4E866068DD576043ABA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				718E1DCD2B98ABA342C2447C /* ResourceManager.cpp */,
 				637C043FA664B485A0BA2DC2 /* ResourceManager.h */,
+				718E1DCD2B98ABA342C2447C /* ResourceManager.cpp */,
 			);
 			name = Resources;
 			sourceTree = "<group>";

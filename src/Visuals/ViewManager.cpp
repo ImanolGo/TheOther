@@ -105,6 +105,10 @@ void ViewManager::update()
 
 void ViewManager::draw()
 {
+    //set background color
+    ofBackgroundGradient(ofColor::white, ofColor::gray);
+
+    
     this->drawOverlays();
     this->drawVisuals();
 	

@@ -15,7 +15,6 @@
 
 #include "SeedsManager.h"
 
-const int SeedsManager::NUMBER_OF_SEEDS= 50;
 
 SeedsManager::SeedsManager(): Manager()
 {
@@ -38,43 +37,21 @@ void SeedsManager::setup()
 
 	Manager::setup();
     
-    this->setupBillboardShader();
+    this->createReferenceVisual();
     this->createSeeds();
+    this->setupBillboardShader();
+    
 }
 
+void SeedsManager::createReferenceVisual()
+{
+    m_referenceVisual = ofPtr<BasicVisual>(new BasicVisual());
+    ofColor color = AppManager::getInstance().getSettingsManager()->getColor("RockColor2");
+    m_referenceVisual->setColor(color);
+}
 
 void SeedsManager::setupBillboardShader()
 {
-    int size = std::max(ofGetHeight(), ofGetWidth())*0.5;
-    
-    billboards.getVertices().resize(NUM_BILLBOARDS);
-    billboards.getColors().resize(NUM_BILLBOARDS);
-    billboards.getNormals().resize(NUM_BILLBOARDS,ofVec3f(0));
-    
-    // ------------------------- billboard particles
-    for (int i=0; i<NUM_BILLBOARDS; i++) {
-        
-        billboardVels[i].set(ofRandomf(), -1.0, 0);
-        /*billboards.getVertices()[i].set(ofRandom(-size, size),
-                                        ofRandom(-size, size),
-                                        ofRandom(-size, size));*/
-        
-        billboards.getVertices()[i].set(ofRandom(-size, size),
-                                        ofRandom(-size, size),
-                                        0);
-
-        
-        //billboards.getColors()[i].set(ofColor::fromHsb(ofRandom(96, 160), 255, 255));
-        billboardSizeTarget[i] = ofRandom(10, 12);
-        
-    }
-    
-    
-    billboards.setUsage( GL_DYNAMIC_DRAW );
-    billboards.setMode(OF_PRIMITIVE_POINTS);
-    //billboardVbo.setVertexData(billboardVerts, NUM_BILLBOARDS, GL_DYNAMIC_DRAW);
-    //billboardVbo.setColorData(billboardColor, NUM_BILLBOARDS, GL_DYNAMIC_DRAW);
-    
     // load the billboard shader
     // this is used to change the
     // size of the particle
@@ -87,7 +64,7 @@ void SeedsManager::setupBillboardShader()
     // we need to disable ARB textures in order to use normalized texcoords
     ofDisableArbTex();
     //image.loadImage("images/general/dot.png");
-    image.loadImage("images/watercolors/seed_texture.png");
+    image.loadImage("images/watercolors/water_color_textures_02.png");
     string resourceName = "Dot";
     texture = AppManager::getInstance().getResourceManager()->getTexture(resourceName);
 }
@@ -95,7 +72,7 @@ void SeedsManager::setupBillboardShader()
 void SeedsManager::draw()
 {
     glEnable(GL_ALPHA_TEST);
-    glAlphaFunc(GL_GREATER, 0.001f);
+    glAlphaFunc(GL_GREATER, 0.1f);
     ofPushMatrix();
     ofSetColor(255);
     // bind the shader so that wee can change the
@@ -108,7 +85,7 @@ void SeedsManager::draw()
     //texture->unbind();
     
     image.getTextureReference().bind();
-    billboards.draw();
+    m_seeds.draw();
     image.getTextureReference().unbind();
     
     
@@ -122,12 +99,36 @@ void SeedsManager::draw()
 
 void SeedsManager::createSeeds()
 {
-    ofLogNotice() <<"SeedsManager::createSeeds";
-    for (int i = 0; i < NUMBER_OF_SEEDS; i++){
-        ofPtr<Seed> seed = ofPtr<Seed>(new Seed(ofVec3f(0,0,0)));
-        m_seeds.push_back(seed);
-        //AppManager::getInstance().getViewManager()->addVisual(seed);
+    int size = std::max(ofGetHeight(), ofGetWidth())*0.6;
+    
+    m_seeds.getVertices().resize(NUMBER_OF_SEEDS);
+    m_seeds.getColors().resize(NUMBER_OF_SEEDS);
+    m_seeds.getNormals().resize(NUMBER_OF_SEEDS,ofVec3f(0));
+    
+    // ------------------------- billboard particles
+    for (int i=0; i<NUMBER_OF_SEEDS; i++) {
+        
+        m_seedsVels[i].set(ofRandomf(), -1.0, 0);
+        /*billboards.getVertices()[i].set(ofRandom(-size, size),
+         ofRandom(-size, size),
+         ofRandom(-size, size));*/
+        
+        m_seeds.getVertices()[i].set(ofRandom(-size, size),
+                                        ofRandom(-size, size),
+                                        0);
+        
+        
+        m_seeds.getColors()[i].set(m_referenceVisual->getColor());
+        m_seedsSizeTarget[i] = ofRandom(10, 12);
+        
     }
+    
+    
+    m_seeds.setUsage( GL_DYNAMIC_DRAW );
+    m_seeds.setMode(OF_PRIMITIVE_POINTS);
+    //billboardVbo.setVertexData(billboardVerts, NUM_BILLBOARDS, GL_DYNAMIC_DRAW);
+    //billboardVbo.setColorData(billboardColor, NUM_BILLBOARDS, GL_DYNAMIC_DRAW);
+
 }
 
 void SeedsManager::update()
@@ -139,25 +140,25 @@ void SeedsManager::updateSeeds()
 {
     float t = (ofGetElapsedTimef()) * 0.9f;
     float div = 250.0;
-    div = 550.0;
+    //div = 550.0;
     
-    for (int i=0; i<NUM_BILLBOARDS; i++) {
+    for (int i=0; i<NUMBER_OF_SEEDS; i++) {
         
         // noise
         /*ofVec3f vec(ofSignedNoise(t, billboards.getVertex(i).y/div, billboards.getVertex(i).z/div),
                     ofSignedNoise(billboards.getVertex(i).x/div, t, billboards.getVertex(i).z/div),
                     ofSignedNoise(billboards.getVertex(i).x/div, billboards.getVertex(i).y/div, t));*/
         
-        ofVec3f vec(ofSignedNoise(t, billboards.getVertex(i).y/div, billboards.getVertex(i).z/div),
-                    ofSignedNoise(billboards.getVertex(i).x/div, t, billboards.getVertex(i).z/div),
+        ofVec3f vec(ofSignedNoise(t, m_seeds.getVertex(i).y/div, m_seeds.getVertex(i).z/div),
+                    ofSignedNoise(m_seeds.getVertex(i).x/div, t, m_seeds.getVertex(i).z/div),
                     0);
         
         vec *= 10 * ofGetLastFrameTime();
-        billboardVels[i] += vec;
-        billboards.getVertices()[i] += billboardVels[i];
-        billboardVels[i] *= 0.94f;
+        m_seedsVels[i] += vec;
+        m_seeds.getVertices()[i] += m_seedsVels[i];
+        m_seedsVels[i] *= 0.94f;
         //billboards.setNormal(i,ofVec3f(12 + billboardSizeTarget[i] * ofNoise(t+i),0,0));
-        billboards.setNormal(i,ofVec3f(12 + billboardSizeTarget[i],0,0));
+        m_seeds.setNormal(i,ofVec3f(12 + m_seedsSizeTarget[i],0,0));
     }
 }
 

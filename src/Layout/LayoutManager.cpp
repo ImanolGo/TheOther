@@ -58,7 +58,7 @@ void LayoutManager::createSvgVisuals()
 
 void LayoutManager::createImageVisuals()
 {
-    this->createBackground();
+    //this->createBackground();
 }
 
 void LayoutManager::createBackground()

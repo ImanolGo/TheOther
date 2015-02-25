@@ -12,7 +12,7 @@
 
 StateManager::StateManager(): Manager()
 {
-    //Intentionally left empty
+    setup();
 }
 
 StateManager::~StateManager()
@@ -45,6 +45,14 @@ void StateManager::createStates()
     /*LoopState* loopState = new LoopState("LoopState");
     loopState->initialize();
     m_stateMachine->addState(loopState);*/
+}
+
+
+void StateManager::changeState(string name)
+{
+    //Create all the states
+    
+    m_stateMachine->onChangeState(name);
 }
 
 

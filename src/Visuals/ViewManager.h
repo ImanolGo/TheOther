@@ -69,6 +69,9 @@ private:
     //! Function called when a key is pressed
     void keyPressed(ofKeyEventArgs &e);
     
+    //! Draws the background
+    void drawBackround();
+    
     //! Draws all the visuals from the 3D world
     void drawVisuals();
     

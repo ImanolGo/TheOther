@@ -57,7 +57,7 @@ protected:
     virtual void setup();
     
     //! create the image visuals
-    virtual void createImageVisuals();
+    virtual void setupColors();
     
     
 protected:
@@ -67,5 +67,7 @@ protected:
     vector<float>       m_cellRadius;
     vector<ofVboMesh>   m_cellMeshes;
     vector<ofVboMesh>   m_cellMeshWireframes;
+    ofColor             m_facesColor;
+    ofColor             m_wireFramesColor;
     
 };

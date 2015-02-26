@@ -12,6 +12,7 @@
 #include "ViewManager.h"
 #include "ResourceManager.h"
 #include "VisualEffectsManager.h"
+#include "BasicVisual.h"
 
 #include "SeedsManager.h"
 
@@ -51,6 +52,7 @@ void SeedsManager::createReferenceVisuals()
     m_referenceSeed->setColor(color);
     
     m_referenceParticle = ofPtr<BasicVisual>(new BasicVisual());
+    color = AppManager::getInstance().getSettingsManager()->getColor("RockColorBlack");
     m_referenceParticle->setColor(color);
     m_referenceParticle->setScale(ofVec3f(0.3));
 }
@@ -87,7 +89,6 @@ void SeedsManager::drawSeeds()
     ofPushMatrix();
     ofPushStyle();
     ofSetColor(255);
-    ofScale(m_referenceSeed->getScale().x, m_referenceSeed->getScale().y, m_referenceSeed->getScale().z);
     // bind the shader so that wee can change the
     // size of the points via the vert shader
     billboardShader.begin();
@@ -158,7 +159,7 @@ void SeedsManager::createSeeds()
         
         
         m_seeds.getColors()[i].set(m_referenceSeed->getColor());
-        m_seedsSizeTarget[i] = m_referenceSeed->getScale()[0];
+        m_seedsSizeTarget[i] = m_referenceSeed->getScale()[0]*12;
         
     }
     
@@ -184,11 +185,11 @@ void SeedsManager::createParticles()
         
         m_particles.getVertices()[i].set(ofRandom(-size, size),
                                      ofRandom(-size, size),
-                                     0);
+                                     -1);
         
         
         m_particles.getColors()[i].set(m_referenceParticle->getColor());
-        m_particlesSizeTarget[i] = m_referenceParticle->getScale()[0];
+        m_particlesSizeTarget[i] = m_referenceParticle->getScale()[0]*12;
         
     }
     
@@ -223,7 +224,7 @@ void SeedsManager::updateSeeds()
         m_seeds.getVertices()[i] += m_seedsVels[i];
         m_seedsVels[i] *= 0.94f;
         //billboards.setNormal(i,ofVec3f(12 + billboardSizeTarget[i] * ofNoise(t+i),0,0));
-        m_seeds.setNormal(i,ofVec3f(12 + m_seedsSizeTarget[i],0,0));
+        m_seeds.setNormal(i,ofVec3f(m_seedsSizeTarget[i],0,0));
         m_seeds.getColors()[i].set(m_referenceSeed->getColor());
         m_seedsSizeTarget[i] = m_referenceSeed->getScale()[0];
     }
@@ -256,6 +257,7 @@ void SeedsManager::updateParticles()
 void SeedsManager::setColor(const ofColor& color)
 {
     AppManager::getInstance().getVisualEffectsManager()->createColorEffect(m_referenceSeed, color, 0, 1);
+    AppManager::getInstance().getVisualEffectsManager()->createColorEffect(m_referenceParticle, color, 0, 1);
 }
 
 void SeedsManager::setSeedsScale(float scale)

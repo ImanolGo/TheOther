@@ -27,12 +27,13 @@ VoronoiVisual::~VoronoiVisual()
 
 void VoronoiVisual::setup()
 {
-    this->createImageVisuals();
+    this->setupColors();
 }
 
-void VoronoiVisual::createImageVisuals()
+void VoronoiVisual::setupColors()
 {
-    
+    m_facesColor = AppManager::getInstance().getSettingsManager()->getColor("VoronoiFaces");
+    m_wireFramesColor = AppManager::getInstance().getSettingsManager()->getColor("VoronoiWireframes");
 }
 
 
@@ -42,13 +43,12 @@ void VoronoiVisual::draw()
         
         ofTranslate(m_position);
         for(int i = 0; i < m_cellMeshes.size(); i++){
-            ofSetColor(100,200);
-            //ofSetColor(ofRandom(255),30);
+            //ofSetColor(m_facesColor);
             //m_cellMeshes[i].drawFaces();
         
             ofPushStyle();
             ofSetLineWidth(3);
-            ofSetColor(68,34,0,200);
+            ofSetColor(m_wireFramesColor);
             m_cellMeshWireframes[i].draw();
             ofPopStyle();
         }

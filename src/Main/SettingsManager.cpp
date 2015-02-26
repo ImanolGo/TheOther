@@ -164,13 +164,14 @@ void SettingsManager::loadColors()
             int r = ofToInt(attributes["r"]);
             int g = ofToInt(attributes["g"]);
             int b = ofToInt(attributes["b"]);
+            int a = ofToInt(attributes["a"]);
             
-            ofPtr<ofColor> color = ofPtr<ofColor> (new ofColor(r,g,b));
+            ofPtr<ofColor> color = ofPtr<ofColor> (new ofColor(r,g,b,a));
             m_colors[attributes["name"]] = color;
             
             
             ofLogNotice() <<"SettingsManager::loadColors->  color = " << attributes["name"] <<", r = " << r
-            <<", g = "<< g << ", b = " << b ;
+            <<", g = "<< g << ", b = " << b << ", a = " << a ;
         }
         while(m_xmlSettings.setToSibling()); // go to the next node
         

@@ -48,16 +48,15 @@ void KeyboardManager::keyPressed(ofKeyEventArgs &e)
     ofLogNotice() <<"KeyboardManager::keyPressed-> " + ofToString(key);
     
     if(key == '1'){
-        
         //AppManager::getInstance().getStateManager()->changeState("SimpleVoronoiState");
-        AppManager::getInstance().getSeedsManager()->setSeedsScale(10);
+        AppManager::getInstance().getSeedsManager()->setSeedsScale(20);
     }
 
     else if(key == '2'){
         AppManager::getInstance().getSeedsManager()->setSeedsScale(0);
     }
 	else if(key == '3'){
-        AppManager::getInstance().getSeedsManager()->setParticlesScale(10);
+        AppManager::getInstance().getSeedsManager()->setParticlesScale(4);
 	}
 	else if(key == '4'){
         AppManager::getInstance().getSeedsManager()->setParticlesScale(0);
@@ -78,7 +77,7 @@ void KeyboardManager::keyPressed(ofKeyEventArgs &e)
         AppManager::getInstance().getSeedsManager()->setColor(color);
     }
     
-    else if(key == '7'){
+    else if(key == '8'){
         ofColor color = AppManager::getInstance().getSettingsManager()->getColor("RockColorBlack");
         AppManager::getInstance().getSeedsManager()->setColor(color);
     }

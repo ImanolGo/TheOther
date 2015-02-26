@@ -105,10 +105,7 @@ void ViewManager::update()
 
 void ViewManager::draw()
 {
-    //set background color
-    ofBackgroundGradient(ofColor::white, ofColor::gray);
-
-    
+    this->drawBackround();
     this->drawOverlays();
     this->drawVisuals();
 	
@@ -116,6 +113,14 @@ void ViewManager::draw()
 	if(m_showDebugInfo){
         m_frameRateText->draw();
 	}
+}
+
+void ViewManager::drawBackround()
+{
+    //ofBackgroundGradient(ofColor::white, ofColor::gray);
+    ofColor centerColor = AppManager::getInstance().getSettingsManager()->getColor("CenterBackgroundColor");
+    ofColor edgeColor = AppManager::getInstance().getSettingsManager()->getColor("EdgeBackgroundColor");
+    ofBackgroundGradient(centerColor,edgeColor,OF_GRADIENT_CIRCULAR);
 }
 
 void ViewManager::drawVisuals()

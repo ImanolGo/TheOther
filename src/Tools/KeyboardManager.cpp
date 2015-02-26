@@ -81,6 +81,31 @@ void KeyboardManager::keyPressed(ofKeyEventArgs &e)
         ofColor color = AppManager::getInstance().getSettingsManager()->getColor("RockColorBlack");
         AppManager::getInstance().getSeedsManager()->setColor(color);
     }
+    
+    else if(key == 'a'){
+        AppManager::getInstance().getVoronoiManager()->enableJitter();
+    }
+    
+    else if(key == 'q'){
+        AppManager::getInstance().getVoronoiManager()->disableJitter();
+    }
+    
+    else if(key == 's'){
+        AppManager::getInstance().getVoronoiManager()->enableMagnifying();
+    }
+    
+    else if(key == 'w'){
+        AppManager::getInstance().getVoronoiManager()->disableMagnifying();
+    }
+    
+    else if(key == 'd'){
+        AppManager::getInstance().getVoronoiManager()->enableOrbit();
+    }
+    
+    else if(key == 'e'){
+        AppManager::getInstance().getVoronoiManager()->disableOrbit();
+    }
+    
 }
 
 void KeyboardManager::keyReleased(ofKeyEventArgs &e)

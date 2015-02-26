@@ -21,6 +21,7 @@
  *	\details It creates and draws a particle system of Seeds
  */
 
+
 class SeedsManager: public Manager
 {
     
@@ -39,18 +40,35 @@ public:
     virtual void draw();
     
     vector<ofVec3f>&  getSeedsVertices(){return m_seeds.getVertices();}
+    
+    virtual void setColor(const ofColor& color);
+    
+    virtual void setSeedsScale(float scale);
+    
+    virtual void setParticlesScale(float scale);
 
 private:
+    
+    virtual void drawSeeds();
+    
+    virtual void drawParticles();
+    
     
     //! Updates the each seed position
     virtual void updateSeeds();
     
     //! Create the seed visuals
+    virtual void updateParticles();
+    
+    //! Create the seed visuals
     virtual void createSeeds();
+    
+    //! Create the seed visuals
+    virtual void createParticles();
     
     virtual void setupBillboardShader();
     
-    virtual void createReferenceVisual();
+    virtual void createReferenceVisuals();
     
 
 private:
@@ -68,13 +86,14 @@ private:
     ofVboMesh m_seeds;
     ofVec3f m_seedsVels[NUMBER_OF_SEEDS];
     
-    float m_sparticlesSizeTarget[NUMBER_OF_PARTICLES];
+    float m_particlesSizeTarget[NUMBER_OF_PARTICLES];
     ofVboMesh m_particles;
     ofVec3f m_particlesVels[NUMBER_OF_PARTICLES];
     
     ofImage image;
     
-    ofPtr<BasicVisual> m_referenceVisual;
+    ofPtr<BasicVisual> m_referenceSeed;
+    ofPtr<BasicVisual> m_referenceParticle;
 };
 
 //==========================================================================

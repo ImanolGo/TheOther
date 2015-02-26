@@ -28,7 +28,7 @@ void ImageVisual3D::draw()
         ofRotateX(m_rotation.x);
         ofRotateY(m_rotation.y);
         ofRotateZ(m_rotation.z);
-        ofScale(m_scale.x, m_scale.y, m_scale.y);
+        ofScale(m_scale.x, m_scale.y, m_scale.z);
 
         m_plane->set(m_width, m_height);
 

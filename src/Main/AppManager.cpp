@@ -81,6 +81,7 @@ void AppManager::setupManagers()
     m_voronoiManager->setup();
     m_seedsManager->setup();
     m_stateManager->setup();
+    m_keyboardManager->setup();
 }
 
 void AppManager::update()

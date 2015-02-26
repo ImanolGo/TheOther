@@ -33,14 +33,17 @@ public:
     //! setups the day watcher
     void setup();
 
-    //! handles a pressed key
-    void keyPressed  (int key);
-
-    //! handles a released key
-    void keyReleased (int key);
+    //! Callback functions when key is pressed
+    virtual void keyPressed(ofKeyEventArgs &e);
+    
+    //! Callback functions when key is released
+    virtual void keyReleased(ofKeyEventArgs &e);
 
 
 protected:
+    
+    //! Adds the events to be listen to
+    virtual void addListeners();
 
 };
 

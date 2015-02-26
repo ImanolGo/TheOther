@@ -184,6 +184,17 @@ void VisualEffectsManager::createColorEffect(ofPtr<BasicVisual> visual,const ofC
 	this->addVisualEffect(colorEffect);
 }
 
+void VisualEffectsManager::createColorEffect(ofPtr<BasicVisual> visual, const ofColor& endColor, double startAnimation, double animationTime)
+{
+    if(!visual)
+        return;
+    
+    ofPtr<ColorEffect> colorEffect = ofPtr<ColorEffect>(new ColorEffect(visual));
+    colorEffect->setParameters(endColor,animationTime);
+    colorEffect->start(startAnimation);
+    this->addVisualEffect(colorEffect);
+}
+
 
 
 

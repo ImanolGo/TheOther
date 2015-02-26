@@ -66,6 +66,9 @@ public:
 	//! Creates a certain moving visual effect
 	void createMoveEffect(ofPtr<BasicVisual> visual, const ofVec3f& endPos, double startAnimation, double animationTime);
 
+    //! Creates a certain color visual effect
+    void createColorEffect(ofPtr<BasicVisual> visual, const ofColor& endColor, double startAnimation, double animationTime);
+    
 	//! Creates a certain color visual effect
 	void createColorEffect(ofPtr<BasicVisual> visual,const ofColor& startColor,const ofColor& endColor, double startAnimation, double animationTime);
 

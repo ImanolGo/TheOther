@@ -2,7 +2,7 @@
  *  TheOthersApp.cpp
  *  The Other
  *
- *  Created by Imanol G—mez on 16/02/15.
+ *  Created by Imanol Gomez on 16/02/15.
  *
  */
 
@@ -11,67 +11,67 @@
 #include "TheOtherApp.h"
 
 //--------------------------------------------------------------
-void OpenCommonsApp::setup(){
+void TheOthersApp::setup(){
     AppManager::getInstance().setup();
 }
 
 //--------------------------------------------------------------
-void OpenCommonsApp::update(){
+void TheOthersApp::update(){
     AppManager::getInstance().update();
 }
 
 //--------------------------------------------------------------
-void OpenCommonsApp::draw(){
+void TheOthersApp::draw(){
     AppManager::getInstance().draw();
 }
 
-void OpenCommonsApp::exit()
+void TheOthersApp::exit()
 {
     ofLogNotice() <<"TheOthersApp::exit";
 
 }
 
 //--------------------------------------------------------------
-void OpenCommonsApp::keyPressed(int key){
+void TheOthersApp::keyPressed(int key){
 
 }
 
 //--------------------------------------------------------------
-void OpenCommonsApp::keyReleased(int key){
+void TheOthersApp::keyReleased(int key){
 
 }
 
 //--------------------------------------------------------------
-void OpenCommonsApp::mouseMoved(int x, int y ){
+void TheOthersApp::mouseMoved(int x, int y ){
 
 }
 
 //--------------------------------------------------------------
-void OpenCommonsApp::mouseDragged(int x, int y, int button){
+void TheOthersApp::mouseDragged(int x, int y, int button){
 
 }
 
 //--------------------------------------------------------------
-void OpenCommonsApp::mousePressed(int x, int y, int button){
+void TheOthersApp::mousePressed(int x, int y, int button){
 
 }
 
 //--------------------------------------------------------------
-void OpenCommonsApp::mouseReleased(int x, int y, int button){
+void TheOthersApp::mouseReleased(int x, int y, int button){
 
 }
 
 //--------------------------------------------------------------
-void OpenCommonsApp::windowResized(int w, int h){
+void TheOthersApp::windowResized(int w, int h){
 
 }
 
 //--------------------------------------------------------------
-void OpenCommonsApp::gotMessage(ofMessage msg){
+void TheOthersApp::gotMessage(ofMessage msg){
 
 }
 
 //--------------------------------------------------------------
-void OpenCommonsApp::dragEvent(ofDragInfo dragInfo){
+void TheOthersApp::dragEvent(ofDragInfo dragInfo){
 
 }

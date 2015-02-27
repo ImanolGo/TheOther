@@ -2,7 +2,7 @@
  *  TheOthersApp.h
  *  The Other
  *
- *  Created by Imanol G—mez on 16/02/15.
+ *  Created by Imanol Gomez on 16/02/15.
  *
  */
 
@@ -11,7 +11,7 @@
 
 #include "ofMain.h"
 
-class OpenCommonsApp : public ofBaseApp{
+class TheOtherApp : public ofBaseApp{
 
 	public:
 		void setup();

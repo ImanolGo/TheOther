@@ -428,8 +428,9 @@ void ColorEffect::update()
 		return;
 	}
 
-    m_color.r = this->function(m_elapsedTime,m_startColor.r,m_endColor.r,m_animationTime);
-	m_color.g = this->function(m_elapsedTime,m_startColor.g,m_endColor.g,m_animationTime);
-	m_color.b = this->function(m_elapsedTime,m_startColor.g,m_endColor.g,m_animationTime);
-	m_visual->setColor(m_color);
+    
+    
+    float amount = this->function(m_elapsedTime,0.0,1.0,m_animationTime);
+    m_color = m_startColor.lerp( m_endColor , amount );
+    m_visual->setColor(m_color);
 }

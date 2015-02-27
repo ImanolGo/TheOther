@@ -178,7 +178,7 @@ void VisualEffectsManager::createColorEffect(ofPtr<BasicVisual> visual,const ofC
     if(!visual)
         return;
 
-	ofPtr<ColorEffect> colorEffect = ofPtr<ColorEffect>(new ColorEffect(visual));
+	ofPtr<ColorEffect> colorEffect = ofPtr<ColorEffect>(new ColorEffect(visual,SINUSOIDAL, EASE_OUT));
 	colorEffect->setParameters(startColor,endColor,animationTime);
 	colorEffect->start(startAnimation);
 	this->addVisualEffect(colorEffect);
@@ -189,7 +189,7 @@ void VisualEffectsManager::createColorEffect(ofPtr<BasicVisual> visual, const of
     if(!visual)
         return;
     
-    ofPtr<ColorEffect> colorEffect = ofPtr<ColorEffect>(new ColorEffect(visual));
+    ofPtr<ColorEffect> colorEffect = ofPtr<ColorEffect>(new ColorEffect(visual,SINUSOIDAL, EASE_OUT));
     colorEffect->setParameters(endColor,animationTime);
     colorEffect->start(startAnimation);
     this->addVisualEffect(colorEffect);

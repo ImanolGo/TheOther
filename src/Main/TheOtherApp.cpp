@@ -1,5 +1,5 @@
 /*
- *  TheOthersApp.cpp
+ *  TheOtherApp.cpp
  *  The Other
  *
  *  Created by Imanol Gomez on 16/02/15.
@@ -11,67 +11,67 @@
 #include "TheOtherApp.h"
 
 //--------------------------------------------------------------
-void TheOthersApp::setup(){
+void TheOtherApp::setup(){
     AppManager::getInstance().setup();
 }
 
 //--------------------------------------------------------------
-void TheOthersApp::update(){
+void TheOtherApp::update(){
     AppManager::getInstance().update();
 }
 
 //--------------------------------------------------------------
-void TheOthersApp::draw(){
+void TheOtherApp::draw(){
     AppManager::getInstance().draw();
 }
 
-void TheOthersApp::exit()
+void TheOtherApp::exit()
 {
-    ofLogNotice() <<"TheOthersApp::exit";
+    ofLogNotice() <<"TheOtherApp::exit";
 
 }
 
 //--------------------------------------------------------------
-void TheOthersApp::keyPressed(int key){
+void TheOtherApp::keyPressed(int key){
 
 }
 
 //--------------------------------------------------------------
-void TheOthersApp::keyReleased(int key){
+void TheOtherApp::keyReleased(int key){
 
 }
 
 //--------------------------------------------------------------
-void TheOthersApp::mouseMoved(int x, int y ){
+void TheOtherApp::mouseMoved(int x, int y ){
 
 }
 
 //--------------------------------------------------------------
-void TheOthersApp::mouseDragged(int x, int y, int button){
+void TheOtherApp::mouseDragged(int x, int y, int button){
 
 }
 
 //--------------------------------------------------------------
-void TheOthersApp::mousePressed(int x, int y, int button){
+void TheOtherApp::mousePressed(int x, int y, int button){
 
 }
 
 //--------------------------------------------------------------
-void TheOthersApp::mouseReleased(int x, int y, int button){
+void TheOtherApp::mouseReleased(int x, int y, int button){
 
 }
 
 //--------------------------------------------------------------
-void TheOthersApp::windowResized(int w, int h){
+void TheOtherApp::windowResized(int w, int h){
 
 }
 
 //--------------------------------------------------------------
-void TheOthersApp::gotMessage(ofMessage msg){
+void TheOtherApp::gotMessage(ofMessage msg){
 
 }
 
 //--------------------------------------------------------------
-void TheOthersApp::dragEvent(ofDragInfo dragInfo){
+void TheOtherApp::dragEvent(ofDragInfo dragInfo){
 
 }
